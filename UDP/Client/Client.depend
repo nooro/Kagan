@@ -1,0 +1,149 @@
+# depslib dependency file v1.0
+1455194482 source:e:\client\main.cpp
+	<iostream>
+	<SDL.h>
+	<SDL_net.h>
+	<cstring>
+
+1455565184 source:c:\users\d1m1tur\desktop\udptest\client\main.cpp
+	"SDL.h"
+	"SDL_net.h"
+	<stdio.h>
+	<windows.h>
+	<string>
+	<iostream>
+	<vector>
+
+1455637046 source:c:\users\d1m1tur\desktop\udpclient\client\main.cpp
+	"Client.h"
+
+1455800192 source:c:\users\d1m1tur\desktop\udpclient\client\src\client.cpp
+	"Client.h"
+
+1455727139 c:\users\d1m1tur\desktop\udpclient\client\include\client.h
+	"SDL.h"
+	"SDL_net.h"
+	<SDL_image.h>
+	<stdio.h>
+	<windows.h>
+	<string>
+	<iostream>
+	<vector>
+
+1455642381 source:c:\users\d1m1tur\desktop\udpclient\client\src\fps.cpp
+	"Client.h"
+
+1455645929 source:c:\users\d1m1tur\desktop\udpclient\client\src\onevent.cpp
+	"Client.h"
+
+1455644017 source:c:\users\d1m1tur\desktop\udpclient\client\src\oninit.cpp
+	"Client.h"
+
+1455645578 source:c:\users\d1m1tur\desktop\udpclient\client\src\onrender.cpp
+	"Client.h"
+
+1455727139 source:c:\users\d1m1tur\desktop\udpclient\client\src\onloop.cpp
+	"Client.h"
+
+1455645345 source:c:\users\d1m1tur\desktop\udpclient\client\src\loadcontent.cpp
+	"Client.h"
+
+1455637046 source:c:\users\danchev\desktop\udpclient\client\main.cpp
+	"Client.h"
+
+1455727139 c:\users\danchev\desktop\udpclient\client\include\client.h
+	"SDL.h"
+	"SDL_net.h"
+	<SDL_image.h>
+	<stdio.h>
+	<windows.h>
+	<string>
+	<iostream>
+	<vector>
+
+1455642381 source:c:\users\danchev\desktop\udpclient\client\src\fps.cpp
+	"Client.h"
+
+1455645345 source:c:\users\danchev\desktop\udpclient\client\src\loadcontent.cpp
+	"Client.h"
+
+1455645929 source:c:\users\danchev\desktop\udpclient\client\src\onevent.cpp
+	"Client.h"
+
+1455644017 source:c:\users\danchev\desktop\udpclient\client\src\oninit.cpp
+	"Client.h"
+
+1455812912 source:c:\users\danchev\desktop\udpclient\client\src\onloop.cpp
+	"Client.h"
+
+1455645578 source:c:\users\danchev\desktop\udpclient\client\src\onrender.cpp
+	"Client.h"
+
+1455812834 source:c:\users\danchev\desktop\udpclient\client\src\client.cpp
+	"Client.h"
+
+1455637046 source:c:\users\d1m1tur\desktop\udp\client\main.cpp
+	"Client.h"
+
+1455727139 c:\users\d1m1tur\desktop\udp\client\include\client.h
+	"SDL.h"
+	"SDL_net.h"
+	<SDL_image.h>
+	<stdio.h>
+	<windows.h>
+	<string>
+	<iostream>
+	<vector>
+
+1455642381 source:c:\users\d1m1tur\desktop\udp\client\src\fps.cpp
+	"Client.h"
+
+1455645345 source:c:\users\d1m1tur\desktop\udp\client\src\loadcontent.cpp
+	"Client.h"
+
+1455645929 source:c:\users\d1m1tur\desktop\udp\client\src\onevent.cpp
+	"Client.h"
+
+1455644017 source:c:\users\d1m1tur\desktop\udp\client\src\oninit.cpp
+	"Client.h"
+
+1455812912 source:c:\users\d1m1tur\desktop\udp\client\src\onloop.cpp
+	"Client.h"
+
+1455645578 source:c:\users\d1m1tur\desktop\udp\client\src\onrender.cpp
+	"Client.h"
+
+1455637046 source:c:\users\d1m1tur\documents\codeblocks projects\udp\client\main.cpp
+	"Client.h"
+
+1455884488 c:\users\d1m1tur\documents\codeblocks projects\udp\client\include\client.h
+	"SDL.h"
+	"SDL_net.h"
+	<SDL_image.h>
+	<stdio.h>
+	<windows.h>
+	<string>
+	<iostream>
+	<vector>
+
+1455642381 source:c:\users\d1m1tur\documents\codeblocks projects\udp\client\src\fps.cpp
+	"Client.h"
+
+1455645345 source:c:\users\d1m1tur\documents\codeblocks projects\udp\client\src\loadcontent.cpp
+	"Client.h"
+
+1455645929 source:c:\users\d1m1tur\documents\codeblocks projects\udp\client\src\onevent.cpp
+	"Client.h"
+
+1455644017 source:c:\users\d1m1tur\documents\codeblocks projects\udp\client\src\oninit.cpp
+	"Client.h"
+
+1455881701 source:c:\users\d1m1tur\documents\codeblocks projects\udp\client\src\onloop.cpp
+	"Client.h"
+
+1455645578 source:c:\users\d1m1tur\documents\codeblocks projects\udp\client\src\onrender.cpp
+	"Client.h"
+
+1455896772 source:c:\users\d1m1tur\documents\codeblocks projects\udp\client\src\client.cpp
+	"Client.h"
+
