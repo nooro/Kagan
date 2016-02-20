@@ -33,6 +33,7 @@
 		</Compiler>
 		<Unit filename="Game.cpp" />
 		<Unit filename="Game.h" />
+		<Unit filename="GameLoop.cpp" />
 		<Unit filename="launcher.cpp" />
 		<Unit filename="launcher.h" />
 		<Extensions>
