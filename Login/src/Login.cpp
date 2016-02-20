@@ -3,8 +3,13 @@
 #include <SDL_ttf.h>
 #include <stdio.h>
 #include <string>
+<<<<<<< HEAD
 #include <sstream>
 #include <windows.h>
+=======
+#include <sstream>
+#include <windows.h>
+>>>>>>> 1098515d5ccd8193fa09387a5e1717f1236cd282
 #include <iostream>
 
 //Screen dimension constants
@@ -42,7 +47,11 @@ class LTexture
 		void setAlpha( Uint8 alpha );
 
 		//Renders texture at given point
+<<<<<<< HEAD
 		void render( int x, int y, SDL_Rect* clip = NULL, double angle = 0.0,
+=======
+		void render( int x, int y, SDL_Rect* clip = NULL, double angle = 0.0,
+>>>>>>> 1098515d5ccd8193fa09387a5e1717f1236cd282
                      SDL_Point* center = NULL, SDL_RendererFlip flip = SDL_FLIP_NONE );
 
 		//Gets image dimensions
@@ -65,6 +74,7 @@ bool init();
 bool loadMedia();
 
 //Frees media and shuts down SDL
+<<<<<<< HEAD
 void close();
 
 //sends the user and password to the server
@@ -72,6 +82,15 @@ void LogIn();
 
 //Checks if the button is clicked
 bool buttonClicked(int Mx, int My, int x, int y, int w, int h);
+=======
+void close();
+
+//sends the user and password to the server
+void LogIn();
+
+//Checks if the button is clicked
+bool buttonClicked(int Mx, int My, int x, int y, int w, int h);
+>>>>>>> 1098515d5ccd8193fa09387a5e1717f1236cd282
 
 //The window we'll be rendering to
 SDL_Window* gWindow = NULL;
@@ -80,6 +99,7 @@ SDL_Window* gWindow = NULL;
 SDL_Renderer* gRenderer = NULL;
 
 //Globally used font
+<<<<<<< HEAD
 TTF_Font *gFont = NULL;
 
 
@@ -108,6 +128,35 @@ bool passwordWriting = false;
 LTexture gInputTextTexture;
 LTexture usernameTexture;
 LTexture passwordTexture;
+=======
+TTF_Font *gFont = NULL;
+
+
+//user and password for the login
+std::string username;
+std::string password;
+
+const int usernameBox_X = 290;
+const int usernameBox_Y = 205;
+
+const int passwordBox_X = 290;
+const int passwordBox_Y = 240;
+
+//290 280 ... 360 300
+const int login_X = 290;
+const int login_Y = 280;
+const int login_W = 70;
+const int login_H = 20;
+
+int writingX = usernameBox_X;
+int writingY = usernameBox_Y;
+bool writing = true;
+
+//Scene textures
+LTexture gInputTextTexture;
+LTexture usernameTexture;
+LTexture passwordTexture;
+>>>>>>> 1098515d5ccd8193fa09387a5e1717f1236cd282
 LTexture backgroundTexture;
 
 LTexture::LTexture()
@@ -344,7 +393,11 @@ bool loadMedia()
 void close()
 {
 	//Free loaded images
+<<<<<<< HEAD
 	gInputTextTexture.free();
+=======
+	gInputTextTexture.free();
+>>>>>>> 1098515d5ccd8193fa09387a5e1717f1236cd282
 	backgroundTexture.free();
 
 	//Free global font
@@ -361,6 +414,7 @@ void close()
 	TTF_Quit();
 	IMG_Quit();
 	SDL_Quit();
+<<<<<<< HEAD
 }
 
 bool buttonClicked(int Mx, int My, int x, int y, int w, int h)
@@ -381,6 +435,28 @@ void LogIn()
 {
     std::cout << "Sending "<<std::endl;
 
+=======
+}
+
+bool buttonClicked(int Mx, int My, int x, int y, int w, int h)
+{
+    if(Mx < x)
+        return false;
+    if(Mx > x + w)
+        return false;
+    if(My < y)
+        return false;
+    if(My > y + h)
+        return false;
+
+    return true;
+}
+
+void LogIn()
+{
+    std::cout << "Sending "<<std::endl;
+
+>>>>>>> 1098515d5ccd8193fa09387a5e1717f1236cd282
 }
 
 int main( int argc, char* args[] )
@@ -410,12 +486,20 @@ int main( int argc, char* args[] )
 
 			//The current input text.
 			std::string inputText = "";
+<<<<<<< HEAD
 			gInputTextTexture.loadFromRenderedText( inputText.c_str(), textColor );
+=======
+			gInputTextTexture.loadFromRenderedText( inputText.c_str(), textColor );
+>>>>>>> 1098515d5ccd8193fa09387a5e1717f1236cd282
 			backgroundTexture.loadFromFile("loginBack.png");
 
 			//Enable text input
 			SDL_StartTextInput();
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> 1098515d5ccd8193fa09387a5e1717f1236cd282
 			//While application is running
 			while( !quit )
 			{
@@ -424,6 +508,7 @@ int main( int argc, char* args[] )
 
 				//Handle events on queue
 				while( SDL_PollEvent( &e ) != 0 )
+<<<<<<< HEAD
 				{
 
 				    //mouse coordinates
@@ -432,6 +517,16 @@ int main( int argc, char* args[] )
 
 				    SDL_GetMouseState(&Mx, &My);
 
+=======
+				{
+
+				    //mouse coordinates
+				    int Mx;
+				    int My;
+
+				    SDL_GetMouseState(&Mx, &My);
+
+>>>>>>> 1098515d5ccd8193fa09387a5e1717f1236cd282
 
 					//User requests quit
 					if( e.type == SDL_QUIT )
@@ -458,6 +553,7 @@ int main( int argc, char* args[] )
 						{
 							inputText = SDL_GetClipboardText();
 							renderText = true;
+<<<<<<< HEAD
 						}
 						else if( e.key.keysym.sym == SDLK_RETURN || e.key.keysym.sym == SDLK_RETURN2  && writing == true)
                         {
@@ -482,6 +578,32 @@ int main( int argc, char* args[] )
                             }
 
 
+=======
+						}
+						else if( e.key.keysym.sym == SDLK_RETURN || e.key.keysym.sym == SDLK_RETURN2  && writing == true)
+                        {
+                            if(username.length() < 1)
+                            {
+                                username = inputText;
+                                std::cout << username <<std::endl;
+                                inputText = "";
+                                writingX = passwordBox_X;
+                                writingY = passwordBox_Y;
+                                usernameTexture.loadFromRenderedText( username.c_str(), textColor );
+                                renderText = true;
+                            }
+                            else if (password.length() < 1)
+                            {
+                                password = inputText;
+                                std::cout << password <<std::endl;
+                                inputText = "";
+                                passwordTexture.loadFromRenderedText( password.c_str(), textColor);
+                                renderText = true;
+                                writing = false;
+                            }
+
+
+>>>>>>> 1098515d5ccd8193fa09387a5e1717f1236cd282
                         }
 					}
 					//Special text input event
@@ -490,6 +612,7 @@ int main( int argc, char* args[] )
 						//Not copy or pasting
 						if( !( ( e.text.text[ 0 ] == 'c' || e.text.text[ 0 ] == 'C' ) && ( e.text.text[ 0 ] == 'v' || e.text.text[ 0 ] == 'V' ) && SDL_GetModState() & KMOD_CTRL ) )
 						{
+<<<<<<< HEAD
 							if(!passwordWriting)
                             {
                                 //Append character
@@ -519,6 +642,28 @@ int main( int argc, char* args[] )
 
 				}
 
+=======
+							//Append character
+							inputText += e.text.text;
+							renderText = true;
+						}
+					}
+
+					if(e.type == SDL_MOUSEBUTTONDOWN)
+                    {
+                        if(e.button.button == SDL_BUTTON_LEFT)
+                        {
+                            if(buttonClicked(Mx, My, login_X, login_Y, login_W, login_H) == true)
+                            {
+                                LogIn();
+                            }
+                        }
+                    }
+
+
+				}
+
+>>>>>>> 1098515d5ccd8193fa09387a5e1717f1236cd282
 
 				//Render text if needed
 				if( renderText )
@@ -541,11 +686,19 @@ int main( int argc, char* args[] )
 				SDL_SetRenderDrawColor( gRenderer, 0xFF, 0xFF, 0xFF, 0xFF );
 				SDL_RenderClear( gRenderer );
 
+<<<<<<< HEAD
 				//Render text textures
                 backgroundTexture.render(0, 0);
                 usernameTexture.render(usernameBox_X, usernameBox_Y);
                 passwordTexture.render(passwordBox_X, passwordBox_Y);
 				gInputTextTexture.render( writingX, writingY);
+=======
+				//Render text textures
+                backgroundTexture.render(0, 0);
+                usernameTexture.render(usernameBox_X, usernameBox_Y);
+                passwordTexture.render(passwordBox_X, passwordBox_Y);
+				gInputTextTexture.render( writingX, writingY);
+>>>>>>> 1098515d5ccd8193fa09387a5e1717f1236cd282
 
 
 				//Update screen
@@ -561,4 +714,8 @@ int main( int argc, char* args[] )
 	close();
 
 	return 0;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 1098515d5ccd8193fa09387a5e1717f1236cd282
