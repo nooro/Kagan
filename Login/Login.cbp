@@ -31,10 +31,6 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-<<<<<<< HEAD
-=======
-		<Unit filename="include/Login.h" />
->>>>>>> 1098515d5ccd8193fa09387a5e1717f1236cd282
 		<Unit filename="src/Login.cpp" />
 		<Extensions>
 			<code_completion />
