@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1455966344 source:c:\users\d1m1tur\documents\codeblocks projects\login\src\login.cpp
+	"../include/Login.h"
+
+1455966410 c:\users\d1m1tur\documents\codeblocks projects\login\include\login.h
+	<iostream>
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_image.h>
+	<windows.h>
+
