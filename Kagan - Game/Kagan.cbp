@@ -31,11 +31,15 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="EventsListener.cpp" />
 		<Unit filename="Game.cpp" />
 		<Unit filename="Game.h" />
 		<Unit filename="GameLoop.cpp" />
+		<Unit filename="ResourcesPaths.h" />
+		<Unit filename="ServerConnection.cpp" />
+		<Unit filename="ServerConnection.h" />
+		<Unit filename="Textures.h" />
 		<Unit filename="launcher.cpp" />
-		<Unit filename="launcher.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
