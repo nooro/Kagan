@@ -31,8 +31,6 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="ProfileManeger.cpp" />
-		<Unit filename="ProfileManeger.h" />
 		<Unit filename="server.cpp" />
 		<Unit filename="server.h" />
 		<Extensions>

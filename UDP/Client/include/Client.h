@@ -19,6 +19,7 @@ class Client
         virtual ~Client();
 
         void OnExecute();
+        char logInfo[50];
 
     private:
 
@@ -63,7 +64,7 @@ class Client
         UDPpacket *in;
         UDPpacket *rec;
 
-        bool sendReturn = false;
+        string sendReturn;
         int numsent;
         int clients = 0;
         int channel;

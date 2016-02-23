@@ -18,7 +18,7 @@ void Client::OnExecute()
         Running = false;
     }
 
-    if(ResolveHost() == false && Running == true)
+    if(ResolveHost() == false)
     {
         printf("ResolveHost failed\n");
         Running = false;
@@ -90,7 +90,7 @@ bool Client::SendMsg()
 {
     cout << "Write a msg : ";
     cin.getline(tempData.msg, 255);
-    sendReturn = false;
+    sendReturn = "false";
 
     out->data = (Uint8*)&tempData.msg;
     out->len = sizeof(tempData.msg);
@@ -133,7 +133,7 @@ void Client::EnterIp()
 
 bool Client::ConnectServer()
 {
-    strcpy(tempData.user, "Mitko");
+    strcpy(tempData.user, logInfo);
 
     cout<<tempData.user<<endl;
 
@@ -149,7 +149,7 @@ bool Client::ConnectServer()
         return false;
     }
 
-    system("cls");
+    //system("cls");
 
     return true;
 }
@@ -162,13 +162,23 @@ bool Client::ClientReceiveStatus()
     {
         if(SDLNet_UDP_Recv(sock, in))
         {
-            sendReturn = (bool)in->data;
-            if(sendReturn == true)
+            cout<<"Receiving"<<endl;
+
+            sendReturn = (char*)in->data;
+
+            if(sendReturn == "true")
+            {
+                cout << "True" <<endl;
                 return true;
+            }
+            else if(sendReturn == "false")
+            {
+                cout << "False" <<endl;
+                return false;
+            }
             else
             {
-                cout<<"Recv: "<<(char*)in->data<<endl;
-                Sleep(1000);
+                cout<<"Recv: "<<sendReturn<<endl;
                 return false;
             }
         }

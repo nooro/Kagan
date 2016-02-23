@@ -6,15 +6,16 @@
 #include <string>
 #include <windows.h>
 #include <stdio.h>
-using namespace std;
+#include <fstream>
+
 
 const int MAX_CLIENTS = 10;
 
 struct Client
 {
 public:
-    string username_;
-    string password_;
+    std::string username_;
+    std::string password_;
     Uint32 host_;
     Uint16 port_;
     int channel_;
@@ -25,11 +26,13 @@ Client clientsArray[MAX_CLIENTS];
 int numberOfClients = 0;
 
 bool clientIsOnline(Uint32 host);
-void addNewClient(Uint32 host, Uint16 port, string username, int channel);
-void sendBack();
+void addNewClient(Uint32 host, Uint16 port, std::string data, int channel);
+void sendBack(char* status_);
 void resendToAllClients(Uint32 senderHost);
 void sendData(Uint8* data_, int length);
+bool login(Client* client);
+void removeClient(Client* client);
+void userData(std::string temp, int client);
 
 Client *getClient(Uint32 host);
-
 #endif // SERVER_H_INCLUDED

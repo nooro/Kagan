@@ -11,6 +11,15 @@
 const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;
 
+//The window we'll be rendering to
+SDL_Window* gWindow = NULL;
+
+//The window renderer
+SDL_Renderer* gRenderer = NULL;
+
+//Globally used font
+TTF_Font *gFont = NULL;
+
 //Texture wrapper class
 class LTexture
 {
@@ -58,57 +67,6 @@ class LTexture
 		int mHeight;
 };
 
-//Starts up SDL and creates window
-bool init();
-
-//Loads media
-bool loadMedia();
-
-//Frees media and shuts down SDL
-void close();
-
-//sends the user and password to the server
-void LogIn();
-
-//Checks if the button is clicked
-bool buttonClicked(int Mx, int My, int x, int y, int w, int h);
-
-//The window we'll be rendering to
-SDL_Window* gWindow = NULL;
-
-//The window renderer
-SDL_Renderer* gRenderer = NULL;
-
-//Globally used font
-TTF_Font *gFont = NULL;
-
-
-//user and password for the login
-std::string username;
-std::string password;
-
-const int usernameBox_X = 290;
-const int usernameBox_Y = 205;
-
-const int passwordBox_X = 290;
-const int passwordBox_Y = 240;
-
-//290 280 ... 360 300
-const int login_X = 290;
-const int login_Y = 280;
-const int login_W = 70;
-const int login_H = 20;
-
-int writingX = usernameBox_X;
-int writingY = usernameBox_Y;
-bool writing = true;
-bool passwordWriting = false;
-
-//Scene textures
-//LTexture gInputTextTexture;
-LTexture usernameTexture;
-LTexture passwordTexture;
-LTexture backgroundTexture;
 
 LTexture::LTexture()
 {
@@ -258,7 +216,67 @@ int LTexture::getHeight()
 	return mHeight;
 }
 
-bool init()
+class Login
+{
+    private:
+
+        bool init();
+        bool loadMedia();
+        void close();
+        bool buttonClicked(int Mx, int My, int x, int y, int w, int h);
+        bool log_in();
+        void registration();
+
+
+
+
+        //user and password for the login
+        std::string username;
+        std::string password;
+
+        const int usernameBox_X = 290;
+        const int usernameBox_Y = 205;
+
+        const int passwordBox_X = 290;
+        const int passwordBox_Y = 240;
+
+        //290 280 ... 360 300
+        const int login_X = 230;
+        const int login_Y = 280;
+        const int login_W = 70;
+        const int login_H = 20;
+
+        const int register_X = 310;
+        const int register_Y = 280;
+        const int register_W = 105;
+        const int register_H = 20;
+
+        int writingX = usernameBox_X;
+        int writingY = usernameBox_Y;
+        bool writing = true;
+        bool passwordWriting = false;
+
+        //Scene textures
+        //LTexture gInputTextTexture;
+        LTexture usernameTexture;
+        LTexture passwordTexture;
+        LTexture backgroundTexture;
+
+    protected:
+    public:
+        Login();
+
+        bool Execute();
+
+
+};
+
+Login::Login()
+{
+    //ctr
+}
+
+bool Login::init()
 {
 	//Initialization flag
 	bool success = true;
@@ -319,7 +337,7 @@ bool init()
 	return success;
 }
 
-bool loadMedia()
+bool Login::loadMedia()
 {
 	//Loading success flag
 	bool success = true;
@@ -341,7 +359,7 @@ bool loadMedia()
 	return success;
 }
 
-void close()
+void Login::close()
 {
 	//Free loaded images
 //	gInputTextTexture.free();
@@ -365,7 +383,7 @@ void close()
 	SDL_Quit();
 }
 
-bool buttonClicked(int Mx, int My, int x, int y, int w, int h)
+bool Login::buttonClicked(int Mx, int My, int x, int y, int w, int h)
 {
     if(Mx < x)
         return false;
@@ -379,15 +397,38 @@ bool buttonClicked(int Mx, int My, int x, int y, int w, int h)
     return true;
 }
 
-void LogIn()
+bool Login::log_in()
 {
     std::cout << "Sending:\nUsername:  "<<username<<"\nPassword:  "<<password<<std::endl;
 
+    std::string str = username + " " + password;
+
+    LPSTR data_ = const_cast<char *>(str.c_str());
+
+    STARTUPINFO si;
+	PROCESS_INFORMATION pi;
+
+	ZeroMemory( &si, sizeof(si) );
+	si.cb = sizeof(si);
+	ZeroMemory( &pi, sizeof(pi) );
+
+    if(!CreateProcess(TEXT("./Client.exe"), data_, NULL, NULL, false, 0, NULL, NULL, &si, &pi))
+    {
+        std::cout << "Fail to execute" <<std::endl;
+        return false;
+    }
+
+    return true;
 }
 
-int main( int argc, char* args[] )
+void Login::registration()
 {
-	//Start up SDL and create window
+    std::cout << "Registering user:\nUsername:  "<<username<<"\nPassword:  "<<password<<std::endl;
+}
+
+bool Login::Execute()
+{
+    //Start up SDL and create window
 	if( !init() )
 	{
 		printf( "Failed to initialize!\n" );
@@ -460,7 +501,7 @@ int main( int argc, char* args[] )
 						}
 						else if( e.key.keysym.sym == SDLK_RETURN || e.key.keysym.sym == SDLK_RETURN2  && writing == true)
                         {
-
+                            quit = log_in();
                         }
                         else if(e.key.keysym.sym == SDLK_TAB)
                         {
@@ -507,7 +548,12 @@ int main( int argc, char* args[] )
                         {
                             if(buttonClicked(Mx, My, login_X, login_Y, login_W, login_H) == true)
                             {
-                                LogIn();
+                                log_in();
+                            }
+
+                            if(buttonClicked(Mx, My, register_X, register_Y, register_W, register_H) == true)
+                            {
+                                registration();
                             }
 
                             if(buttonClicked(Mx, My, 285, 200, 135, 25))
@@ -570,6 +616,15 @@ int main( int argc, char* args[] )
 
 	//Free resources and close SDL
 	close();
+
+	return 0;
+}
+
+int main( int argc, char* args[] )
+{
+	Login log;
+
+	log.Execute();
 
 	return 0;
 }
