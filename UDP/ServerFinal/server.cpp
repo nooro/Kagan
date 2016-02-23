@@ -1,5 +1,5 @@
 #include "server.h"
-using namespace std;
+#include "ProfileManeger.h"
 
 UDPsocket sock;
 UDPpacket *input;
@@ -9,8 +9,10 @@ int numsend;
 
 int main(int argc, char ** argv)
 {
+    ProfileManeger profile;
+    profile.LogIn("Dancheff", "pass");
+    cout << profile.logInPacket << endl;
     SDLNet_Init();
-
     IPaddress ip;
 
 
@@ -121,6 +123,5 @@ Client *getClient(Uint32 host)
         if(clientsArray[i].host_ == host)
             return &clientsArray[i];
     }
-
     return NULL;
 }
