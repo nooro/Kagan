@@ -6,6 +6,7 @@ void Game::GameLoop()
     {
         Game::CheckForEvents();
 
+        Game::Render();
 
     }
 }

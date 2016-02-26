@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -35,11 +37,13 @@
 		<Unit filename="Game.cpp" />
 		<Unit filename="Game.h" />
 		<Unit filename="GameLoop.cpp" />
+		<Unit filename="Render.cpp" />
 		<Unit filename="ResourcesPaths.h" />
 		<Unit filename="ServerConnection.cpp" />
 		<Unit filename="ServerConnection.h" />
-		<Unit filename="Textures.h" />
+		<Unit filename="include/LGTexture.h" />
 		<Unit filename="launcher.cpp" />
+		<Unit filename="src/LGTexture.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1456405538 source:c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\eventslistener.cpp
+	"Game.h"
+	"ServerConnection.h"
+
+1456426924 c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\game.h
+	"LGTexture.h"
+	<SDL.h>
+	<iostream>
+
+1456140462 c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\serverconnection.h
+
+1456329303 source:c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\gameloop.cpp
+	"Game.h"
+
+1456140462 source:c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\launcher.cpp
+	"Game.h"
+	"ServerConnection.h"
+
+1456140462 source:c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\serverconnection.cpp
+	"ServerConnection.h"
+
+1456493252 source:c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\game.cpp
+	"Game.h"
+
+1456493339 source:c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\render.cpp
+	"Game.h"
+
+1456493252 source:c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\src\lgtexture.cpp
+	"LGTexture.h"
+
+1456493301 c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\include\lgtexture.h
+	"SDL.h"
+	"SDL_image.h"
+	<string>
+	<stdio.h>
+
+1456408174 c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\global.h
+	<iostream>
+	"SDL.h"
+
