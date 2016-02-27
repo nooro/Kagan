@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Blank" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Blank" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Blank" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="include/Camera.h" />
+		<Unit filename="include/Enemies.h" />
+		<Unit filename="include/Entity.h" />
+		<Unit filename="include/Game.h" />
+		<Unit filename="include/Includes.h" />
+		<Unit filename="include/Map.h" />
+		<Unit filename="include/OnAnimate.h" />
+		<Unit filename="include/TILE.h" />
+		<Unit filename="src/Camera.cpp" />
+		<Unit filename="src/Cleanup.cpp" />
+		<Unit filename="src/Enemies.cpp" />
+		<Unit filename="src/Entity.cpp" />
+		<Unit filename="src/FPS.cpp" />
+		<Unit filename="src/Game.cpp" />
+		<Unit filename="src/LoadContent.cpp" />
+		<Unit filename="src/Map.cpp" />
+		<Unit filename="src/Map_GameObjects.cpp" />
+		<Unit filename="src/OnAnimate.cpp" />
+		<Unit filename="src/OnEvent.cpp" />
+		<Unit filename="src/OnInit.cpp" />
+		<Unit filename="src/OnLoop.cpp" />
+		<Unit filename="src/OnRender.cpp" />
+		<Unit filename="src/TILE.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
