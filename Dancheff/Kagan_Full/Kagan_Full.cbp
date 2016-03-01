@@ -31,6 +31,11 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="GUI/Button.cpp" />
+		<Unit filename="GUI/Button.h" />
+		<Unit filename="GUI/GUI.cpp" />
+		<Unit filename="GUI/GUI.h" />
+		<Unit filename="General/CreateTexture.h" />
 		<Unit filename="Kagan/EventListener.cpp" />
 		<Unit filename="Kagan/Game.cpp" />
 		<Unit filename="Kagan/Game.h" />

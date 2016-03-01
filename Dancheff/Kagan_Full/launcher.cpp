@@ -1,13 +1,11 @@
 #include "ServerCommunication/ServerCommunication.h"
 #include "Kagan/Game.h"
 #include "User/User.h"
-
+#include "ServerCommunication/LogIn.h"
 int main(int argc, char ** argv)
 {
     ServerCommunication server;
-    Game Kagan;
-    User user;
-
+    LogIn logIn;
     if(server.Connect("127.0.0.1"))
     {
 
@@ -17,9 +15,6 @@ int main(int argc, char ** argv)
 
     }
 
-    delete(&user);
-    delete(&Kagan);
     delete(&server);
-
     return 0;
 }
