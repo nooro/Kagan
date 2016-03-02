@@ -3,7 +3,7 @@
 GUI::GUI()
 {
     rect.x = 0; rect.y = 0;
-    rect.w = 0; rect.h = 0;
+    rect.w = 10010; rect.h = 1000;
     texture = NULL;
     hoverTexture = NULL;
     SDL_GetMouseState(&mouseX, &mouseY);
@@ -15,14 +15,11 @@ GUI::~GUI()
     SDL_DestroyTexture(hoverTexture);
 }
 
-bool GUI::isClicked()
+bool GUI::isClicked(SDL_Event *event)
 {
-    if(SDL_PollEvent(&event))
-    {
-        if(event.type == SDL_MOUSEBUTTONUP && event.button.button == SDL_BUTTON_LEFT)
-            return this->isHover();
-        return false;
-    }
+    if(event->type == SDL_MOUSEBUTTONUP && event->button.button == SDL_BUTTON_LEFT)
+        return this->isHover();
+    return false;
 }
 
 bool GUI::isHover()

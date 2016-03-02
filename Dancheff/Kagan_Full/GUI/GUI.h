@@ -25,11 +25,10 @@ public:
     void SetHoverTexture(SDL_Texture *hoverTexture);
 
     bool isHover();
-    bool isClicked();
+    bool isClicked(SDL_Event *event);
 
 protected:
     SDL_Rect rect;
-    SDL_Event event;
     SDL_Texture *texture;
     SDL_Texture *hoverTexture;
 

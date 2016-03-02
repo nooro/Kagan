@@ -17,7 +17,7 @@ LogIn::LogIn()
     if(renderer == NULL)
         cout << "Failed to create renderer: " << SDL_GetError() << endl;
 
-    backgroundTexture = CreateTexture("castle.jpg", renderer);
+    backgroundTexture = CreateTexture("logInBG.jpg", renderer);
     if(backgroundTexture == NULL)
         cout << "Failed to create background texture: " << IMG_GetError() << endl;
 
@@ -39,10 +39,13 @@ void LogIn::Loop()
 {
     while(logInWindowIsActive)
     {
-        if (event.key.keysym.sym == SDLK_ESCAPE)
-            logInWindowIsActive = false;
+        if(SDL_PollEvent(&event))
+        {
+            if (event.key.keysym.sym == SDLK_ESCAPE)
+                logInWindowIsActive = false;
 
-        if(logInButton.isClicked())
-            cout << "The button was clicked" << endl;
+            if(logInButton.isClicked(&event))
+                cout << "The button was clicked" << endl;
+        }
     }
 }
