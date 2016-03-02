@@ -2,10 +2,11 @@
 
 GUI::GUI()
 {
-    x = 0; y = 0;
-    w = 0; h = 0;
+    rect.x = 0; rect.y = 0;
+    rect.w = 0; rect.h = 0;
     texture = NULL;
     hoverTexture = NULL;
+    SDL_GetMouseState(&mouseX, &mouseY);
 }
 
 GUI::~GUI()
@@ -18,44 +19,28 @@ bool GUI::isClicked()
 {
     if(SDL_PollEvent(&event))
     {
-        if(event.type == SDL_MOUSEBUTTONDOWN && event.button.button == SDL_BUTTON_LEFT)
-        {
-            if(event.button.x >= x && event.button.x <= x + w)
-            {
-                if(event.button.y >= y && event.button.y <= y + h)
-                {
-                    return true;
-                }
-            }
-        }
+        if(event.type == SDL_MOUSEBUTTONUP && event.button.button == SDL_BUTTON_LEFT)
+            return this->isHover();
+        return false;
     }
-    return false;
 }
 
-bool GUI::isHovered()
+bool GUI::isHover()
 {
-    int *mouseX, *mouseY;
-    SDL_GetMouseState(mouseX, mouseY);
-
-    if(*mouseX >= x && *mouseX <= x + w)
-    {
-        if(*mouseY >= y && *mouseY <= y+h)
-        {
-            return true;
-        }
-    }
-    return false;
+    SDL_GetMouseState(&mouseX, &mouseY);
+    return mouseX >= rect.x && mouseX <= rect.x + rect.w
+        && mouseX >= rect.y && mouseX <= rect.y + rect.h ;
 }
 
-int GUI::GetX() { return x; }
-int GUI::GetY() { return y; }
-int GUI::GetWidth() { return w; }
-int GUI::GetHeight() { return h; }
+int GUI::GetX() { return rect.x; }
+int GUI::GetY() { return rect.y; }
+int GUI::GetWidth() { return rect.w; }
+int GUI::GetHeight() { return rect.h; }
 
-void GUI::SetHeight(int height) { h = height; }
-void GUI::SetWidth(int width) { w = width; }
-void GUI::SetX(int x) { this->x = x; }
-void GUI::SetY(int y) { this->y = y; }
+void GUI::SetHeight(int height) { rect.h = height; }
+void GUI::SetWidth(int width) { rect.w = width; }
+void GUI::SetX(int x) { rect.x = x; }
+void GUI::SetY(int y) { rect.y = y; }
 
 void GUI::SetTexture(SDL_Texture *texture) { this->texture = texture; }
 void GUI::SetHoverTexture(SDL_Texture *hoverTexture) { this->hoverTexture = hoverTexture; }

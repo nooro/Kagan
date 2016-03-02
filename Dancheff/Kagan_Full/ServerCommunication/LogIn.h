@@ -4,6 +4,8 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include <iostream>
+#include "../General/General.h"
+#include "../GUI/Button.h"
 using namespace std;
 
 class LogIn
@@ -19,9 +21,10 @@ private:
     SDL_Event event;
     SDL_Texture *backgroundTexture = NULL;
 
+    Button logInButton;
+
     bool logInWindowIsActive;
     void Loop();
-    void CheckForEvents();
 };
 
 #endif // LOGIN_H_INCLUDED

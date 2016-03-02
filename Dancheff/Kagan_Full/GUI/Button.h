@@ -7,7 +7,7 @@
 #include <SDL.h>
 using namespace std;
 
-class Button : GUI
+class Button : public GUI
 {
 public:
     void SetText(string text);

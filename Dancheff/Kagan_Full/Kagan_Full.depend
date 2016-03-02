@@ -1,0 +1,81 @@
+# depslib dependency file v1.0
+1456643502 source:e:\kagan_full\kagan\game.cpp
+	"Game.h"
+
+1456941331 source:e:\kagan_full\launcher.cpp
+	<SDL.h>
+	"General/General.h"
+	"ServerCommunication/ServerCommunication.h"
+	"Kagan/Game.h"
+	"User/User.h"
+	"ServerCommunication/LogIn.h"
+
+1456643502 e:\kagan_full\kagan\game.h
+	<SDL.h>
+	<iostream>
+
+1456607355 source:e:\kagan_full\kagan\eventlistener.cpp
+	"Game.h"
+
+1456608104 source:e:\kagan_full\kagan\gameloop.cpp
+	"Game.h"
+
+1456608104 source:e:\kagan_full\kagan\loadtheresources.cpp
+	"Game.h"
+
+1456832077 source:e:\kagan_full\servercommunication\servercommunication.cpp
+	"ServerCommunication.h"
+
+1456828653 e:\kagan_full\servercommunication\servercommunication.h
+	<SDL_net.h>
+	<iostream>
+	"PacketKeys.h"
+
+1456840817 e:\kagan_full\servercommunication\packetkeys.h
+
+1456785937 e:\kagan_full\user\user.h
+	<iostream>
+
+1456941541 source:e:\kagan_full\servercommunication\login.cpp
+	"LogIn.h"
+
+1456941437 e:\kagan_full\servercommunication\login.h
+	<SDL.h>
+	<SDL_image.h>
+	<iostream>
+	"../General/General.h"
+	"../GUI/Button.h"
+
+1456936194 source:e:\kagan_full\gui\gui.cpp
+	"GUI.h"
+
+1456936239 e:\kagan_full\gui\gui.h
+	<SDL.h>
+	<iostream>
+
+1456867796 e:\kagan_full\gui\button.h
+	"GUI.h"
+	<iostream>
+	<SDL_ttf.h>
+	<SDL.h>
+
+1456853985 source:e:\kagan_full\gui\button.cpp
+	"Button.h"
+
+1456854609 e:\kagan_full\general\createtexture.h
+
+1456940460 source:e:\kagan_full\initialization\initialization.cpp
+	"Initialization.h"
+
+1456940366 e:\kagan_full\initialization\initialization.h
+	<windows.h>
+
+1456941646 source:e:\kagan_full\general\general.cpp
+	"General.h"
+
+1456941424 e:\kagan_full\general\general.h
+	<SDL.h>
+	<SDL_image.h>
+	<iostream>
+	<windows.h>
+

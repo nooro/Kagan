@@ -1,14 +1,5 @@
 #include "LogIn.h"
 
-SDL_Texture *CreateTexture(std::string filePath, SDL_Renderer* textureRenderer){
-    SDL_Texture* texture = NULL;
-    SDL_Surface* temp_surface = IMG_Load(filePath.c_str());
-
-    texture = SDL_CreateTextureFromSurface(textureRenderer, temp_surface);
-    SDL_FreeSurface(temp_surface);
-    return texture;
-}
-
 LogIn::LogIn()
 {
     if(SDL_Init(SDL_INIT_EVERYTHING) < 0)
@@ -16,8 +7,8 @@ LogIn::LogIn()
 
     window = SDL_CreateWindow("Log In",
                               SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
-                              640, 360,
-                              SDL_WINDOW_SHOWN );
+                              GetScreenWidth() / 2, GetScreenHeight() / 2,
+                              SDL_WINDOW_SHOWN | SDL_WINDOW_BORDERLESS);
     if(window == NULL)
         cout << "Failed to create window: " << SDL_GetError() << endl;
 
@@ -48,15 +39,10 @@ void LogIn::Loop()
 {
     while(logInWindowIsActive)
     {
-        CheckForEvents();
-    }
-}
+        if (event.key.keysym.sym == SDLK_ESCAPE)
+            logInWindowIsActive = false;
 
-void LogIn::CheckForEvents()
-{
-    if(SDL_PollEvent(&event))
-        {
-            if(event.type == SDL_QUIT)
-                logInWindowIsActive = false;
-        }
+        if(logInButton.isClicked())
+            cout << "The button was clicked" << endl;
+    }
 }

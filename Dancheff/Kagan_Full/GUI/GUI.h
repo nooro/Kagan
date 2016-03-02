@@ -23,16 +23,17 @@ public:
 
     void SetTexture(SDL_Texture *texture);
     void SetHoverTexture(SDL_Texture *hoverTexture);
-    bool isHovered();
+
+    bool isHover();
     bool isClicked();
 
 protected:
-    int x, y;
-    int w, h;
-
+    SDL_Rect rect;
+    SDL_Event event;
     SDL_Texture *texture;
     SDL_Texture *hoverTexture;
-    SDL_Event event;
+
+    int mouseX, mouseY;
 };
 
 #endif // GUI_H_INCLUDED
