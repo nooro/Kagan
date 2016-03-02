@@ -28,7 +28,7 @@
 #define SPAWNPOINT 6
 #define SELL 1
 
-const int FPS = 60;
+const int FPS = 1000;
 
 using namespace std;
 

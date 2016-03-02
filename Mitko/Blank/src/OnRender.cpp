@@ -10,7 +10,7 @@ void Game::OnRender()
     Map1.RenderMap(Renderer, &Camera1);
     //Map2.RenderMap(Renderer, &Camera1);
     //Map3.RenderMap(Renderer, &Camera1);
-    Character.Animate(Renderer, &Camera1, &Idle[Rotation]);
+   // Character.Animate(Renderer, &Camera1, &Idle[Rotation]);
 
 
 

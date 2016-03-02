@@ -97,3 +97,91 @@
 1456939274 c:\users\d1m1tur\documents\codeblocks projects\blank\include\animation.h
 	"Includes.h"
 
+1456939643 source:c:\users\d1m1tur\desktop\git\kagan\mitko\blank\src\animation.cpp
+	"Game.h"
+	"Animation.h"
+
+1456943648 c:\users\d1m1tur\desktop\git\kagan\mitko\blank\include\game.h
+	"Includes.h"
+	"Entity.h"
+	"Map.h"
+	"Camera.h"
+	"Animation.h"
+
+1456946094 c:\users\d1m1tur\desktop\git\kagan\mitko\blank\include\includes.h
+	<SDL.h>
+	<SDL_image.h>
+	<iostream>
+	<windows.h>
+	<stdlib.h>
+	<stdio.h>
+	<time.h>
+	<typeinfo>
+	<fstream>
+	<sstream>
+	<math.h>
+
+1456939094 c:\users\d1m1tur\desktop\git\kagan\mitko\blank\include\entity.h
+	"Includes.h"
+	"Camera.h"
+	"Animation.h"
+
+1455035985 c:\users\d1m1tur\desktop\git\kagan\mitko\blank\include\camera.h
+	"Includes.h"
+
+1456939274 c:\users\d1m1tur\desktop\git\kagan\mitko\blank\include\animation.h
+	"Includes.h"
+
+1456528178 c:\users\d1m1tur\desktop\git\kagan\mitko\blank\include\map.h
+	"TILE.h"
+	"Includes.h"
+
+1456528173 c:\users\d1m1tur\desktop\git\kagan\mitko\blank\include\tile.h
+	"Includes.h"
+	"Camera.h"
+
+1455148099 source:c:\users\d1m1tur\desktop\git\kagan\mitko\blank\src\camera.cpp
+	"Camera.h"
+
+1454145551 source:c:\users\d1m1tur\desktop\git\kagan\mitko\blank\src\cleanup.cpp
+	"Game.h"
+
+1446389084 source:c:\users\d1m1tur\desktop\git\kagan\mitko\blank\src\enemies.cpp
+	"Enemies.h"
+
+1446388523 c:\users\d1m1tur\desktop\git\kagan\mitko\blank\include\enemies.h
+	"Includes.h"
+	"Entity.h"
+
+1456938712 source:c:\users\d1m1tur\desktop\git\kagan\mitko\blank\src\entity.cpp
+	"Game.h"
+
+1455148106 source:c:\users\d1m1tur\desktop\git\kagan\mitko\blank\src\game.cpp
+	"Game.h"
+
+1456945938 source:c:\users\d1m1tur\desktop\git\kagan\mitko\blank\src\loadcontent.cpp
+	"Game.h"
+
+1456530338 source:c:\users\d1m1tur\desktop\git\kagan\mitko\blank\src\map.cpp
+	"Map.h"
+	"Game.h"
+
+1456941425 source:c:\users\d1m1tur\desktop\git\kagan\mitko\blank\src\onevent.cpp
+	"Game.h"
+
+1456939419 source:c:\users\d1m1tur\desktop\git\kagan\mitko\blank\src\oninit.cpp
+	"Game.h"
+
+1456527119 source:c:\users\d1m1tur\desktop\git\kagan\mitko\blank\src\onloop.cpp
+	"Game.h"
+
+1456945891 source:c:\users\d1m1tur\desktop\git\kagan\mitko\blank\src\onrender.cpp
+	"Game.h"
+
+1456528173 source:c:\users\d1m1tur\desktop\git\kagan\mitko\blank\src\tile.cpp
+	"TILE.h"
+	"Game.h"
+
+1456946000 source:c:\users\d1m1tur\desktop\git\kagan\mitko\blank\src\fps.cpp
+	"Game.h"
+

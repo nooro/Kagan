@@ -18,14 +18,14 @@ bool Game::LoadContent()
 
     Character.Image = OnLoad(Renderer, "./Resources/Images/SIdle1.png");
 
-    if(!Idle[0].Load(Renderer, "./Resources/Images/SIdle1.png", 50, 500, 400)) return false;
+    /*if(!Idle[0].Load(Renderer, "./Resources/Images/SIdle1.png", 50, 500, 400)) return false;
     if(!Idle[1].Load(Renderer, "./Resources/Images/SIdle2.png", 50, 500, 400)) return false;
     if(!Idle[2].Load(Renderer, "./Resources/Images/SIdle3.png", 50, 500, 400)) return false;
     if(!Idle[3].Load(Renderer, "./Resources/Images/SIdle4.png", 50, 500, 400)) return false;
     if(!Idle[4].Load(Renderer, "./Resources/Images/SIdle5.png", 50, 500, 400)) return false;
     if(!Idle[5].Load(Renderer, "./Resources/Images/SIdle6.png", 50, 500, 400)) return false;
     if(!Idle[6].Load(Renderer, "./Resources/Images/SIdle7.png", 50, 500, 400)) return false;
-    if(!Idle[7].Load(Renderer, "./Resources/Images/SIdle8.png", 50, 500, 400)) return false;
+    if(!Idle[7].Load(Renderer, "./Resources/Images/SIdle8.png", 50, 500, 400)) return false;*/
 
     if(Map1.Hover_Image == NULL)
     {
