@@ -16,6 +16,8 @@ public:
     int GetWidth();
     int GetHeight();
 
+    int mouseX, mouseY;
+
     void SetX(int x);
     void SetY(int y);
     void SetWidth(int width);
@@ -27,12 +29,9 @@ public:
     bool isHover();
     bool isClicked(SDL_Event *event);
 
-protected:
     SDL_Rect rect;
     SDL_Texture *texture;
     SDL_Texture *hoverTexture;
-
-    int mouseX, mouseY;
 };
 
 #endif // GUI_H_INCLUDED

@@ -3,7 +3,7 @@
 GUI::GUI()
 {
     rect.x = 0; rect.y = 0;
-    rect.w = 10010; rect.h = 1000;
+    rect.w = 0; rect.h = 0;
     texture = NULL;
     hoverTexture = NULL;
     SDL_GetMouseState(&mouseX, &mouseY);
@@ -26,7 +26,7 @@ bool GUI::isHover()
 {
     SDL_GetMouseState(&mouseX, &mouseY);
     return mouseX >= rect.x && mouseX <= rect.x + rect.w
-        && mouseX >= rect.y && mouseX <= rect.y + rect.h ;
+        && mouseY >= rect.y && mouseY <= rect.y + rect.h ;
 }
 
 int GUI::GetX() { return rect.x; }

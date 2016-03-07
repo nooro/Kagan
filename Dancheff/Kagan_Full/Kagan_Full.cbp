@@ -35,6 +35,8 @@
 		<Unit filename="GUI/Button.h" />
 		<Unit filename="GUI/GUI.cpp" />
 		<Unit filename="GUI/GUI.h" />
+		<Unit filename="GUI/InputField.cpp" />
+		<Unit filename="GUI/InputField.h" />
 		<Unit filename="General/General.cpp" />
 		<Unit filename="General/General.h" />
 		<Unit filename="Kagan/EventListener.cpp" />
