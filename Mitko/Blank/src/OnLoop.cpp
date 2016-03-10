@@ -3,7 +3,7 @@
 void Game::OnLoop()
 {
     //Gets the start ticks
-    OnStartup();
+    //OnStartup();
 
     //Set default cursor every frame
     SDL_SetCursor(SDL_GetDefaultCursor());
@@ -21,7 +21,7 @@ void Game::OnLoop()
 
 
     //Caps the frame rate depending on the ticks that have past
-    FrameRate(FPS);
+    //FrameRate(FPS);
 }
 
 void Game::MouseDrag(Entity *object, Camera *cam)

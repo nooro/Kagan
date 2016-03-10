@@ -159,7 +159,7 @@
 1455148106 source:c:\users\d1m1tur\desktop\git\kagan\mitko\blank\src\game.cpp
 	"Game.h"
 
-1456945938 source:c:\users\d1m1tur\desktop\git\kagan\mitko\blank\src\loadcontent.cpp
+1456946732 source:c:\users\d1m1tur\desktop\git\kagan\mitko\blank\src\loadcontent.cpp
 	"Game.h"
 
 1456530338 source:c:\users\d1m1tur\desktop\git\kagan\mitko\blank\src\map.cpp
@@ -172,10 +172,10 @@
 1456939419 source:c:\users\d1m1tur\desktop\git\kagan\mitko\blank\src\oninit.cpp
 	"Game.h"
 
-1456527119 source:c:\users\d1m1tur\desktop\git\kagan\mitko\blank\src\onloop.cpp
+1456947018 source:c:\users\d1m1tur\desktop\git\kagan\mitko\blank\src\onloop.cpp
 	"Game.h"
 
-1456945891 source:c:\users\d1m1tur\desktop\git\kagan\mitko\blank\src\onrender.cpp
+1456946732 source:c:\users\d1m1tur\desktop\git\kagan\mitko\blank\src\onrender.cpp
 	"Game.h"
 
 1456528173 source:c:\users\d1m1tur\desktop\git\kagan\mitko\blank\src\tile.cpp
