@@ -38,8 +38,14 @@ void Game::CheckForEvents()
 
             if (event.key.keysym.sym == SDLK_SPACE)
             {
-                character.takeDmg(1);
-                health_bar.setCurrency(character.getHp());
+                int dmg = 10;
+
+                if(character.getState())
+                {
+                    character.takeDmg(dmg);
+                    dmgtxt.load(renderer, dmg, character.rect.x, character.rect.y);
+                    health_bar.setCurrency(character.getHp());
+                }
             }
 
             if (event.key.keysym.sym == SDLK_r)

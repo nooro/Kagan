@@ -1,13 +1,16 @@
 # depslib dependency file v1.0
-1457823240 source:c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\eventslistener.cpp
+1457912268 source:c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\eventslistener.cpp
 	"Game.h"
 	"ServerConnection.h"
 
-1457843389 c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\game.h
+1457912133 c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\game.h
 	<SDL.h>
+	<SDL_ttf.h>
 	<iostream>
 	<Entity.h>
 	"Background.h"
+	"GUIBars.h"
+	"DMGText.h"
 
 1456140462 c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\serverconnection.h
 
@@ -21,17 +24,18 @@
 1456140462 source:c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\serverconnection.cpp
 	"ServerConnection.h"
 
-1457823521 source:c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\game.cpp
+1457912446 source:c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\game.cpp
 	"Game.h"
 
-1457791789 source:c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\render.cpp
+1457911241 source:c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\render.cpp
 	"Game.h"
 
-1457821595 source:c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\src\lgtexture.cpp
+1457909162 source:c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\src\lgtexture.cpp
 	"LGTexture.h"
 
-1457821595 c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\include\lgtexture.h
+1457909162 c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\include\lgtexture.h
 	"SDL.h"
+	"SDL_ttf.h"
 	"SDL_image.h"
 	<string>
 	<stdio.h>
@@ -40,13 +44,19 @@
 	<iostream>
 	"SDL.h"
 
-1457819311 source:c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\src\entity.cpp
+1457911994 source:c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\src\entity.cpp
 	"Entity.h"
 
-1457822983 c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\include\entity.h
+1457911935 c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\include\entity.h
 	"LGTexture.h"
 	<vector>
 
 1457825270 c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\background.h
 	<SDL.h>
+
+1457909963 c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\guibars.h
+
+1457912497 c:\users\d1m1tur\documents\codeblocks projects\kagan\kagan - game\dmgtext.h
+	<sstream>
+	<string>
 

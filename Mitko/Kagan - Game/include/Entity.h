@@ -24,6 +24,10 @@ class Entity
             return stats.hp;
         }
 
+        bool getState()
+        {
+            return alive;
+        }
 
         void respawn()
         {
@@ -31,8 +35,17 @@ class Entity
             alive = true;
         }
 
+        struct position
+        {
+            float x;
+            float y;
+            int w;
+            int h;
+        }rect;
+
         static std::vector<Entity*> entities;
         static Entity *getEntity(std::string name_);
+
 
 
 
@@ -43,14 +56,6 @@ class Entity
         std::string name;
 
         bool alive;
-
-        struct position
-        {
-            float x;
-            float y;
-            int w;
-            int h;
-        }rect;
 
         struct point
         {

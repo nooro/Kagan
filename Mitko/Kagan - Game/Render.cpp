@@ -8,6 +8,7 @@ void Game::Render()
     background.render(renderer);
     character.render(renderer);
     health_bar.render(renderer);
+    dmgtxt.render(renderer);
 
 
     SDL_RenderPresent(renderer);

@@ -7,6 +7,11 @@ Game::Game()
         cout << "Failed to initialize SDL: "<< SDL_GetError() <<endl;
     }
 
+    if( TTF_Init() < 0 )
+    {
+        printf( "SDL_ttf could not initialize! SDL_ttf Error: %s\n", TTF_GetError() );
+    }
+
     //Window initialization
     window = SDL_CreateWindow("Kagan", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
                               640, 480, SDL_WINDOW_SHOWN | SDL_WINDOW_FULLSCREEN_DESKTOP);
@@ -42,6 +47,9 @@ void Game::LoadTheResources()
     background.InitBackground("./resources/textures/back.jpg", renderer);
     character.createEntity("Player", 0.5, 0.5, 50, 50, WINDOW_MAX_WIDTH, WINDOW_MAX_HEIGHT, renderer, "./resources/textures/red.bmp");
     health_bar.init("./resources/textures/healthbar.png", renderer, WINDOW_MAX_WIDTH, WINDOW_MAX_HEIGHT, 0.05, 0.05, 0.75);
+    dmgtxt.init("sans.ttf", 24, White, WINDOW_MAX_WIDTH, WINDOW_MAX_HEIGHT);
+    dmgtxt.setAscend(0.01);
+    dmgtxt.setFade(7);
 }
 
 void Game::Exit()

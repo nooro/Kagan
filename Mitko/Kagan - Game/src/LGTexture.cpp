@@ -12,6 +12,51 @@ LGTexture::~LGTexture()
     free();
 }
 
+#ifdef _SDL_TTF_H
+bool LGTexture::loadFromRenderedText( std::string textureText, SDL_Renderer* Rend, TTF_Font* font, SDL_Color textColor, int x, int y )
+{
+	//Get rid of preexisting texture
+	free();
+
+	//Render text surface
+	SDL_Surface* textSurface = TTF_RenderText_Solid( font, textureText.c_str(), textColor);
+
+	if( textSurface != NULL )
+	{
+		//Create texture from surface pixels
+        Texture = SDL_CreateTextureFromSurface( Rend, textSurface );
+
+		if( Texture == NULL )
+		{
+			printf( "Unable to create texture from rendered text! SDL Error: %s\n", SDL_GetError() );
+
+			return false;
+		}
+		else
+		{
+			//Get image dimensions
+			width = textSurface->w;
+			height = textSurface->h;
+
+            screen_x = x;
+            screen_y = y;
+		}
+
+		//Get rid of old surface
+		SDL_FreeSurface( textSurface );
+	}
+	else
+	{
+		printf( "Unable to render text surface! SDL_ttf Error: %s\n", TTF_GetError() );
+
+		return false;
+	}
+
+
+	return true;
+}
+#endif
+
 bool LGTexture::load(SDL_Renderer* LGRenderer, char* FILE, int x, int y)
 {
     free();

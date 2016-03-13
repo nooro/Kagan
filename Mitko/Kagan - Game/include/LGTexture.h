@@ -2,6 +2,7 @@
 #define LGTEXTURE_H
 
 #include "SDL.h"
+#include "SDL_ttf.h"
 #include "SDL_image.h"
 #include <string>
 #include <stdio.h>
@@ -17,6 +18,9 @@ class LGTexture
 
         //Loads an image from file
         bool load(SDL_Renderer* LGRenderer, char* FILE, int x, int y);
+        #ifdef _SDL_TTF_H
+        bool loadFromRenderedText( std::string textureText, SDL_Renderer* Rend, TTF_Font* font, SDL_Color textColor, int x, int y );
+        #endif // _SDL_TTF_H
 
         //Frees memory
         void free();

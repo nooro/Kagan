@@ -58,6 +58,9 @@ void Entity::render(SDL_Renderer *Rend)
 
 void Entity::moveTo(float x_, float y_)
 {
+    if(this->alive == false)
+        return;
+
     this->rect.x += x_;
     this->rect.y += y_;
 }
