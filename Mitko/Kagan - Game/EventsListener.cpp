@@ -36,22 +36,38 @@ void Game::CheckForEvents()
                 Entity::getEntity("Player")->moveTo(0.01, 0);
             }
 
+
+
             if (event.key.keysym.sym == SDLK_SPACE)
             {
-                int dmg = 10;
 
-                if(character.getState())
-                {
-                    character.takeDmg(dmg);
-                    dmgtxt.load(renderer, dmg, character.rect.x, character.rect.y);
-                    health_bar.setCurrency(character.getHp());
-                }
             }
 
             if (event.key.keysym.sym == SDLK_r)
             {
                 character.respawn();
-                health_bar.setCurrency(character.getHp());
+                health_bar.setCurrency(character.getStats().hp);
+            }
+        }
+
+        if(event.type == SDL_MOUSEBUTTONDOWN && event.button.button == SDL_BUTTON_LEFT)
+        {
+            int dmg = 7;
+            int x , y;
+            SDL_GetMouseState(&x, &y);
+
+            float x_ = x;
+            float y_ = y;
+
+            x_ /= WINDOW_MAX_WIDTH;
+            y_ /= WINDOW_MAX_HEIGHT;
+
+            if(character.getState() && character.isHover())
+            {
+                character.takeDmg(dmg);
+                dmgtxt.load(dmg, x_, y_);
+                dmg_text.push_back(dmgtxt);
+                health_bar.setCurrency(character.getStats().hp);
             }
         }
 

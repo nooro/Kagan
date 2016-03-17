@@ -34,7 +34,10 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="Background.h" />
+		<Unit filename="DMGText.cpp" />
+		<Unit filename="DMGText.h" />
 		<Unit filename="EventsListener.cpp" />
+		<Unit filename="GUIBars.h" />
 		<Unit filename="Game.cpp" />
 		<Unit filename="Game.h" />
 		<Unit filename="GameLoop.cpp" />
