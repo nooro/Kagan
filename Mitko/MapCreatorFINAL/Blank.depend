@@ -1,0 +1,185 @@
+# depslib dependency file v1.0
+1454145551 source:c:\users\d1m1tur\documents\codeblocks projects\blank\src\cleanup.cpp
+	"Game.h"
+
+1446389084 source:c:\users\d1m1tur\documents\codeblocks projects\blank\src\enemies.cpp
+	"Enemies.h"
+
+1455032909 source:c:\users\d1m1tur\documents\codeblocks projects\blank\src\entity.cpp
+	"Game.h"
+
+1445720557 source:c:\users\d1m1tur\documents\codeblocks projects\blank\src\fps.cpp
+	"Game.h"
+
+1455148106 source:c:\users\d1m1tur\documents\codeblocks projects\blank\src\game.cpp
+	"Game.h"
+
+1456526584 source:c:\users\d1m1tur\documents\codeblocks projects\blank\src\map.cpp
+	"Map.h"
+	"Game.h"
+
+1456526832 source:c:\users\d1m1tur\documents\codeblocks projects\blank\src\map_gameobjects.cpp
+	"Map.h"
+	"Game.h"
+
+1444314168 source:c:\users\d1m1tur\documents\codeblocks projects\blank\src\onanimate.cpp
+	"OnAnimate.h"
+
+1455290191 source:c:\users\d1m1tur\documents\codeblocks projects\blank\src\onevent.cpp
+	"Game.h"
+
+1455032982 source:c:\users\d1m1tur\documents\codeblocks projects\blank\src\oninit.cpp
+	"Game.h"
+
+1455149476 source:c:\users\d1m1tur\documents\codeblocks projects\blank\src\onloop.cpp
+	"Game.h"
+
+1456526584 source:c:\users\d1m1tur\documents\codeblocks projects\blank\src\tile.cpp
+	"TILE.h"
+	"Game.h"
+
+1456525538 c:\users\d1m1tur\documents\codeblocks projects\blank\include\game.h
+	"Includes.h"
+	"OnAnimate.h"
+	"Entity.h"
+	"Map.h"
+	"Camera.h"
+
+1453908618 c:\users\d1m1tur\documents\codeblocks projects\blank\include\includes.h
+	<SDL.h>
+	<SDL_image.h>
+	<iostream>
+	<windows.h>
+	<stdlib.h>
+	<stdio.h>
+	<time.h>
+	<typeinfo>
+	<fstream>
+	<sstream>
+	<math.h>
+
+1421764500 c:\users\d1m1tur\documents\codeblocks projects\blank\include\onanimate.h
+	"Includes.h"
+
+1455019468 c:\users\d1m1tur\documents\codeblocks projects\blank\include\entity.h
+	"Includes.h"
+	"Camera.h"
+
+1456526818 c:\users\d1m1tur\documents\codeblocks projects\blank\include\map.h
+	"TILE.h"
+	"Includes.h"
+
+1456526584 c:\users\d1m1tur\documents\codeblocks projects\blank\include\tile.h
+	"Includes.h"
+	"Camera.h"
+
+1446388523 c:\users\d1m1tur\documents\codeblocks projects\blank\include\enemies.h
+	"Includes.h"
+	"Entity.h"
+
+1456526584 source:c:\users\d1m1tur\documents\codeblocks projects\blank\src\loadcontent.cpp
+	"Game.h"
+
+1456526250 source:c:\users\d1m1tur\documents\codeblocks projects\blank\src\onrender.cpp
+	"Game.h"
+
+1455035985 c:\users\d1m1tur\documents\codeblocks projects\blank\include\camera.h
+	"Includes.h"
+
+1455148099 source:c:\users\d1m1tur\documents\codeblocks projects\blank\src\camera.cpp
+	"Camera.h"
+
+1458598219 source:c:\users\d1m1tur\documents\codeblocks projects\layercreator\src\camera.cpp
+	"Camera.h"
+
+1455035985 c:\users\d1m1tur\documents\codeblocks projects\layercreator\include\camera.h
+	"Includes.h"
+
+1458549051 c:\users\d1m1tur\documents\codeblocks projects\layercreator\include\includes.h
+	<SDL.h>
+	<SDL_image.h>
+	<iostream>
+	<windows.h>
+	<stdlib.h>
+	<stdio.h>
+	<time.h>
+	<typeinfo>
+	<fstream>
+	<sstream>
+	<math.h>
+	<list>
+
+1456580318 source:c:\users\d1m1tur\documents\codeblocks projects\layercreator\src\cleanup.cpp
+	"Game.h"
+
+1458648981 c:\users\d1m1tur\documents\codeblocks projects\layercreator\include\game.h
+	"Includes.h"
+	"OnAnimate.h"
+	"Entity.h"
+	"Map.h"
+	"Camera.h"
+
+1421764500 c:\users\d1m1tur\documents\codeblocks projects\layercreator\include\onanimate.h
+	"Includes.h"
+
+1455019468 c:\users\d1m1tur\documents\codeblocks projects\layercreator\include\entity.h
+	"Includes.h"
+	"Camera.h"
+
+1458647288 c:\users\d1m1tur\documents\codeblocks projects\layercreator\include\map.h
+	"TILE.h"
+	"Includes.h"
+
+1458549123 c:\users\d1m1tur\documents\codeblocks projects\layercreator\include\tile.h
+	"Includes.h"
+	"Camera.h"
+
+1446389084 source:c:\users\d1m1tur\documents\codeblocks projects\layercreator\src\enemies.cpp
+	"Enemies.h"
+
+1446388523 c:\users\d1m1tur\documents\codeblocks projects\layercreator\include\enemies.h
+	"Includes.h"
+	"Entity.h"
+
+1455032909 source:c:\users\d1m1tur\documents\codeblocks projects\layercreator\src\entity.cpp
+	"Game.h"
+
+1445720557 source:c:\users\d1m1tur\documents\codeblocks projects\layercreator\src\fps.cpp
+	"Game.h"
+
+1457640589 source:c:\users\d1m1tur\documents\codeblocks projects\layercreator\src\game.cpp
+	"Game.h"
+
+1458648835 source:c:\users\d1m1tur\documents\codeblocks projects\layercreator\src\map_gameobjects.cpp
+	"Map.h"
+	"Game.h"
+
+1444314168 source:c:\users\d1m1tur\documents\codeblocks projects\layercreator\src\onanimate.cpp
+	"OnAnimate.h"
+
+1458648992 source:c:\users\d1m1tur\documents\codeblocks projects\layercreator\src\onevent.cpp
+	"Game.h"
+
+1455032982 source:c:\users\d1m1tur\documents\codeblocks projects\layercreator\src\oninit.cpp
+	"Game.h"
+
+1458649019 source:c:\users\d1m1tur\documents\codeblocks projects\layercreator\src\onloop.cpp
+	"Game.h"
+
+1456582385 source:c:\users\d1m1tur\documents\codeblocks projects\layercreator\src\onrender.cpp
+	"Game.h"
+
+1458507801 source:c:\users\d1m1tur\documents\codeblocks projects\layercreator\src\tile.cpp
+	"TILE.h"
+	"Game.h"
+
+1458647064 source:c:\users\d1m1tur\documents\codeblocks projects\layercreator\src\map.cpp
+	"Map.h"
+	"Game.h"
+	<string>
+	<windows.h>
+	<direct.h>
+
+1458648237 source:c:\users\d1m1tur\documents\codeblocks projects\layercreator\src\loadcontent.cpp
+	"Game.h"
+
