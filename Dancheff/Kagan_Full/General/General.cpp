@@ -29,11 +29,9 @@ SDL_Texture *CreateTexture(std::string filePath, SDL_Renderer* textureRenderer){
     return texture;
 }
 
-SDL_Texture *CreateTextTexture(SDL_Renderer* renderer, char *text, std::string fontPath, int fontSize)
+SDL_Texture *CreateTextTexture(SDL_Renderer* renderer, std::string text, TTF_Font *font, int fontSize, SDL_Color textColor)
 {
-    TTF_Font *font = TTF_OpenFont("sans.ttf", fontSize);
-    SDL_Color textColor = {0, 128, 0, 255};
-    SDL_Surface *textSurface = TTF_RenderText_Solid(font, text, textColor);
+    SDL_Surface *textSurface = TTF_RenderText_Solid(font, text.c_str(), textColor);
     SDL_Texture *textTexture = SDL_CreateTextureFromSurface(renderer, textSurface);
     SDL_FreeSurface(textSurface);
     return textTexture;

@@ -10,7 +10,7 @@ void InitEverythingGeneral();
 #include <windows.h>
 
 SDL_Texture *CreateTexture(std::string filePath, SDL_Renderer* textureRenderer);
-SDL_Texture *CreateTextTexture(SDL_Renderer* renderer, char *text, std::string fontPath, int fontSize);
+SDL_Texture *CreateTextTexture(SDL_Renderer* renderer, std::string text, TTF_Font *font, int fontSize, SDL_Color textColor);
 
 int GetScreenHeight();
 int GetScreenWidth();

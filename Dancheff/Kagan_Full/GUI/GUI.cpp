@@ -11,6 +11,7 @@ GUI::GUI()
 
 GUI::~GUI()
 {
+    delete(&rect);
     SDL_DestroyTexture(texture);
     SDL_DestroyTexture(hoverTexture);
 }

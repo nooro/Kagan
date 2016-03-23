@@ -1,0 +1,111 @@
+# depslib dependency file v1.0
+1456643502 source:e:\kagan_full\kagan\game.cpp
+	"Game.h"
+
+1458729087 source:e:\kagan_full\launcher.cpp
+	"General/General.h"
+	"Kagan/Game.h"
+	"User/User.h"
+	"ServerCommunication/Register.h"
+
+1456643502 e:\kagan_full\kagan\game.h
+	<SDL.h>
+	<iostream>
+
+1456607355 source:e:\kagan_full\kagan\eventlistener.cpp
+	"Game.h"
+
+1456608104 source:e:\kagan_full\kagan\gameloop.cpp
+	"Game.h"
+
+1456608104 source:e:\kagan_full\kagan\loadtheresources.cpp
+	"Game.h"
+
+1458742801 source:e:\kagan_full\servercommunication\servercommunication.cpp
+	"ServerCommunication.h"
+
+1458742725 e:\kagan_full\servercommunication\servercommunication.h
+	<SDL_net.h>
+	<iostream>
+	"PacketKeys.h"
+
+1458742892 e:\kagan_full\servercommunication\packetkeys.h
+
+1456785937 e:\kagan_full\user\user.h
+	<iostream>
+
+1458656881 source:e:\kagan_full\servercommunication\login.cpp
+	"LogIn.h"
+
+1458547458 e:\kagan_full\servercommunication\login.h
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+	<iostream>
+	<windows.h>
+	"ServerCommunication.h"
+	"../GUI/Button.h"
+	"../GUI/InputField.h"
+
+1457891872 source:e:\kagan_full\gui\gui.cpp
+	"GUI.h"
+
+1457128395 e:\kagan_full\gui\gui.h
+	<SDL.h>
+	<iostream>
+
+1457458560 e:\kagan_full\gui\button.h
+	"GUI.h"
+	"../General/General.h"
+	<iostream>
+	<SDL_ttf.h>
+	<SDL.h>
+
+1457458560 source:e:\kagan_full\gui\button.cpp
+	"Button.h"
+
+1456854609 e:\kagan_full\general\createtexture.h
+
+1456940460 source:e:\kagan_full\initialization\initialization.cpp
+	"Initialization.h"
+
+1456940366 e:\kagan_full\initialization\initialization.h
+	<windows.h>
+
+1457989238 source:e:\kagan_full\general\general.cpp
+	"General.h"
+
+1457732003 e:\kagan_full\general\general.h
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+	<iostream>
+	<windows.h>
+
+1457994631 source:e:\kagan_full\gui\inputfield.cpp
+	"InputField.h"
+
+1457994617 e:\kagan_full\gui\inputfield.h
+	"GUI.h"
+	"../General/General.h"
+	<iostream>
+	<SDL_ttf.h>
+	<SDL.h>
+
+1458079355 source:e:\kagan_full\test.cpp
+	<SDL_net.h>
+	<iostream>
+
+1458728971 e:\kagan_full\servercommunication\register.h
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+	<iostream>
+	<windows.h>
+	"ServerCommunication.h"
+	"../GUI/Button.h"
+	"../GUI/InputField.h"
+
+1458745707 source:e:\kagan_full\servercommunication\register.cpp
+	"Register.h"
+

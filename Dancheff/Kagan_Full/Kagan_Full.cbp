@@ -47,6 +47,8 @@
 		<Unit filename="ServerCommunication/LogIn.cpp" />
 		<Unit filename="ServerCommunication/LogIn.h" />
 		<Unit filename="ServerCommunication/PacketKeys.h" />
+		<Unit filename="ServerCommunication/Register.cpp" />
+		<Unit filename="ServerCommunication/Register.h" />
 		<Unit filename="ServerCommunication/ServerCommunication.cpp" />
 		<Unit filename="ServerCommunication/ServerCommunication.h" />
 		<Unit filename="User/User.h" />

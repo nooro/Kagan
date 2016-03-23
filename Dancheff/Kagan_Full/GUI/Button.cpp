@@ -1,8 +1,13 @@
 #include "Button.h"
 
-void Button::SetText(char *text, string fontPath, int fontSize, SDL_Renderer *renderer)
+Button::Button()
 {
-    buttonText = CreateTextTexture(renderer, text, fontPath, fontSize);
+    buttonFont = TTF_OpenFont("Resources/Fonts/Chiller.ttf", 20);
+}
+
+void Button::SetText(char *text, TTF_Font *font, int fontSize, SDL_Renderer *renderer)
+{
+    buttonText = CreateTextTexture(renderer, text, font, fontSize, buttonTextColor);
 }
 
 void Button::Render(SDL_Renderer *renderer)

@@ -11,12 +11,15 @@ using namespace std;
 class Button : public GUI
 {
 public:
-    void SetText(char *text, string fontPath, int fontSize, SDL_Renderer *renderer);
+    Button();
+    void SetText(char *text, TTF_Font *font, int fontSize, SDL_Renderer *renderer);
     void Render(SDL_Renderer *renderer);
     void RenderHover(SDL_Renderer *renderer);
 
 private:
     SDL_Texture *buttonText;
+    TTF_Font *buttonFont;
+    SDL_Color buttonTextColor;
 };
 
 #endif // BUTTON_H_INCLUDED

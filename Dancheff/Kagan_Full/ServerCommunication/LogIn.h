@@ -5,6 +5,8 @@
 #include <SDL_image.h>
 #include <SDL_ttf.h>
 #include <iostream>
+#include <windows.h>
+#include "ServerCommunication.h"
 #include "../GUI/Button.h"
 #include "../GUI/InputField.h"
 using namespace std;
@@ -17,6 +19,9 @@ public:
     char Status(); //Return if the log-in is successful or not.
 
 private:
+    char *serverIP = "127.0.0.1";
+    SDL_Texture *inputFieldTexture = NULL;
+    SDL_Texture *inputFieldTextureHover = NULL;
     SDL_Window *window = NULL;
     SDL_Renderer *renderer = NULL;
     SDL_Event event;
@@ -25,6 +30,16 @@ private:
     SDL_Texture *logoTexture = NULL;
     SDL_Rect logoRect;
     SDL_Texture *backgroundTexture = NULL;
+
+    TTF_Font *labelFont;
+    SDL_Texture *usernameLabel;
+    SDL_Texture *passwordLabel;
+    SDL_Rect usernameLabelRect;
+    SDL_Rect passwordLabelRect;
+    SDL_Color labelColor;
+
+    InputField *usernameInputField;
+    InputField *passwordInputField;
 
     Button logInButton;
     SDL_Texture *buttonTexture = NULL;
@@ -36,7 +51,6 @@ private:
     void InitTheButton();
     void InitTheInputFields();
     void InitTheTextures();
-
 };
 
 #endif // LOGIN_H_INCLUDED
