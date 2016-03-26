@@ -46,9 +46,9 @@ void Server::MainLoop()
         {
             if(RECEIVED_KEY == LOG_IN_KEY)
             {
-                string username = GetFirstArgument(input->data);
+                string username = GetQueryArgument(input->data, 2);
                 char logInStatus[1];
-                logInStatus[0] = profile.LogIn(username, GetSecondArgument(input->data));
+                logInStatus[0] = profile.LogIn(username, GetQueryArgument(input->data, 3));
                 if(logInStatus[0] == LOG_IN_SUCCESS)
                     AddNewClient(input->address.host, input->address.port, username, input->channel);
                 SendData((Uint8*)logInStatus, sizeof(logInStatus));
@@ -56,9 +56,9 @@ void Server::MainLoop()
             else if(RECEIVED_KEY == REGISTER_KEY)
             {
                 char registerStatus[1];
-                registerStatus[0] = profile.Register(GetFirstArgument(input->data), GetSecondArgument(input->data));
+                registerStatus[0] = profile.Register(GetQueryArgument(input->data, 2), GetQueryArgument(input->data, 3));
                 SendData((Uint8*)registerStatus, sizeof(registerStatus));
-                cout << "New profile registered: " << GetFirstArgument(input->data) << endl;
+                cout << "New profile registered: " << GetQueryArgument(input->data, 2) << endl;
             }
             Server::SendBack();
             receivedData = "";
@@ -115,31 +115,21 @@ void Server::ResendToAllClients(Uint32 senderHost)
     }
 }
 
-string Server::GetFirstArgument(Uint8 *input)
+string Server::GetQueryArgument(Uint8 *input, int argumentNumber)
 {
-    string strInput = (char*)input;
-    strInput[0] = ' '; //Clear the packet key
-    strInput[1] = ' '; //Clear the first separator '/'
-    size_t firstSeparatorPosition = strInput.find("/"); //Get the position of the first separator after the key-argument separator
+    string argument = "";
+    int currentArgument = 0;
 
-    char arg[firstSeparatorPosition - 1]; //Create basic c_string with enough space to hold the first argument
-    strInput.copy(arg, firstSeparatorPosition - 2, 2); //Separate the first argument in 'arg'
-    arg[firstSeparatorPosition] = '\0'; //Put null-termination at the end of the array to mark the end of it and limit the size of the string
-    string strArg = arg; //Cast the basic c_string to c++ string
-    return strArg;
-}
+    for(int i = 0; currentArgument < argumentNumber; i++)
+    {
+        if(input[i] == '/')
+        {
+            currentArgument++;
+            continue;
+        }
 
-string Server::GetSecondArgument(Uint8 *input)
-{
-    string strInput = (char*)input;
-    strInput[0] = ' '; //Clear the packet key
-    strInput[1] = ' '; //Clear the first separator '/'
-    size_t firstSeparatorPosition = strInput.find("/"); //Get the position of the first separator after the key-argument separator
-    size_t lengthOfSecontArgument = strInput.length() - firstSeparatorPosition;
-
-    char arg[lengthOfSecontArgument]; //Create basic c_string with enough space to hold the second argument
-    strInput.copy(arg, lengthOfSecontArgument, firstSeparatorPosition + 1); //Separate the first argument in 'arg'
-    arg[lengthOfSecontArgument] = '\0'; //Put null-termination at the end of the array to mark the end of it and limit the size of the string
-    string strArg = arg;
-    return strArg;
+        if(currentArgument == argumentNumber - 1)
+            argument += input[i];
+    }
+    return argument;
 }

@@ -17,13 +17,15 @@ InputField::InputField(SDL_Renderer *renderer)
     if(font == NULL)
         cout << "Failed to open the font: " << TTF_GetError() << endl;
 
-    rect = {0, 0, 0, 0};
     SDL_RenderPresent(render);
     textColor = {255, 255, 255, 0};
+    inputText = "";
+    charLimit = 1;
 }
 
 InputField::~InputField()
 {
+    delete(&rect);
     TTF_CloseFont(font);
     TTF_Quit();
 }
@@ -31,15 +33,19 @@ InputField::~InputField()
 void InputField::Render()
 {
     SDL_RenderCopy(render, texture, NULL, &rect);
+    int width = rect.w;
+    rect.w = inputText.length() * (width / charLimit);
     SDL_RenderCopy(render, inputTexture, NULL, &rect);
-
+    rect.w = width;
 }
 
 void InputField::RenderHover()
 {
     SDL_RenderCopy(render, hoverTexture, NULL, &rect);
+    int width = rect.w;
+    rect.w = inputText.length() * (width / charLimit);
     SDL_RenderCopy(render, inputTexture, NULL, &rect);
-    SDL_RenderPresent(render);
+    rect.w = width;
 }
 
 
@@ -47,10 +53,10 @@ void InputField::Input(SDL_Event *e)
 {
     if(e->type == SDL_KEYDOWN  && isActive)
     {
-        if(e->key.keysym.sym == SDLK_BACKSPACE && inputText.length() > 0)
+        if(e->key.keysym.sym == SDLK_BACKSPACE)
         {
-            inputText.pop_back();
-            inputTexture = CreateTextTexture(render, inputText, font, rect.w - charLimit, textColor);
+            if(inputText.length() > 0)
+                Delete();
         }
         else if(e->key.keysym.sym == SDLK_RETURN || e->key.keysym.sym == SDLK_RETURN2)
             isActive = false;
@@ -63,17 +69,31 @@ void InputField::Input(SDL_Event *e)
                 inputText += (char)e->key.keysym.sym;
 
                 if(type == "normal")
-                    inputTexture = CreateTextTexture(render, inputText, font, rect.w / charLimit, textColor);
+                    inputTexture = CreateTextTexture(render, inputText, font, textColor);
                 else if(type == "password")
                 {
                     string passToShow;
                     for(int i = 0; i < inputText.length(); ++i)
                         passToShow += '*';
-                    inputTexture = CreateTextTexture(render, passToShow, font, rect.w / charLimit, textColor);
+                    inputTexture = CreateTextTexture(render, passToShow, font, textColor);
                 }
             }
         }
     }
+}
+
+void InputField::Delete()
+{
+    inputText.pop_back();
+    if(type == "password")
+    {
+        string passToShow;
+        for(int i = 0; i < inputText.length(); ++i)
+            passToShow += '*';
+        inputTexture = CreateTextTexture(render, passToShow, font, textColor);
+    }
+    else
+        inputTexture = CreateTextTexture(render, inputText, font, textColor);
 }
 
 string InputField::GetInputText() { return inputText; }

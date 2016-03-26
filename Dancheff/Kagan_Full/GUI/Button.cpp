@@ -5,9 +5,9 @@ Button::Button()
     buttonFont = TTF_OpenFont("Resources/Fonts/Chiller.ttf", 20);
 }
 
-void Button::SetText(char *text, TTF_Font *font, int fontSize, SDL_Renderer *renderer)
+void Button::SetText(char *text, TTF_Font *font, SDL_Renderer *renderer)
 {
-    buttonText = CreateTextTexture(renderer, text, font, fontSize, buttonTextColor);
+    buttonText = CreateTextTexture(renderer, text, font, buttonTextColor);
 }
 
 void Button::Render(SDL_Renderer *renderer)

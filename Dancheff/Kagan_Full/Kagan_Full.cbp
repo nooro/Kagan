@@ -44,6 +44,8 @@
 		<Unit filename="Kagan/Game.h" />
 		<Unit filename="Kagan/GameLoop.cpp" />
 		<Unit filename="Kagan/LoadTheResources.cpp" />
+		<Unit filename="Launcher/ProfileWindow.cpp" />
+		<Unit filename="Launcher/ProfileWindow.h" />
 		<Unit filename="ServerCommunication/LogIn.cpp" />
 		<Unit filename="ServerCommunication/LogIn.h" />
 		<Unit filename="ServerCommunication/PacketKeys.h" />

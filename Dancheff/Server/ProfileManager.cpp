@@ -13,7 +13,7 @@ char ProfileManager::Register(string username, string password)
     {
         ofstream file;
         file.open(path);
-        file << password << "\n";
+        file << password;
         file.close();
         return REGISTER_SUCCESS;
     }

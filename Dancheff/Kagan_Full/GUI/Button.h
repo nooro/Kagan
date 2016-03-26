@@ -12,7 +12,7 @@ class Button : public GUI
 {
 public:
     Button();
-    void SetText(char *text, TTF_Font *font, int fontSize, SDL_Renderer *renderer);
+    void SetText(char *text, TTF_Font *font, SDL_Renderer *renderer);
     void Render(SDL_Renderer *renderer);
     void RenderHover(SDL_Renderer *renderer);
 

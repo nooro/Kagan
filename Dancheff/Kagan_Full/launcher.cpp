@@ -6,6 +6,7 @@
 int main(int argc, char ** argv)
 {
     InitEverythingGeneral();
-    Register registration;
+    Register logIn;
+    delete(&logIn);
     return 0;
 }

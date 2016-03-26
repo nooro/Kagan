@@ -1,0 +1,9 @@
+#ifndef PROFILEWINDOW_H_INCLUDED
+#define PROFILEWINDOW_H_INCLUDED
+
+class ProfileWindow
+{
+
+};
+
+#endif // PROFILEWINDOW_H_INCLUDED

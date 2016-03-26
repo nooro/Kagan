@@ -34,8 +34,11 @@ private:
     SDL_Color textColor;
     TTF_Font *font = NULL;
     SDL_Texture *inputTexture = NULL;
-    string inputText;
+
+    string inputText = "";
     int charLimit;
+
+    void Delete();
 };
 
 #endif // INPUTFIELD_H_INCLUDED

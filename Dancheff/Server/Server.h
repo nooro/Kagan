@@ -38,8 +38,8 @@ private:
     void SendData(Uint8* data_, int length); //Send data to clients the server
     void ResendToAllClients(Uint32 senderHost); //When one client sends data the server resends it to all other clients (the magic of synchronization)
     void AddNewClient(Uint32 host, Uint16 port, string username, int channel); //Add new client to the clients' array
-    string GetFirstArgument(Uint8 *input); // Get the first query argument after the packet key
-    string GetSecondArgument(Uint8 *input); // Get the second query argument after the packet key
+    string GetQueryArgument(Uint8 *input, int argumentNumber); //Get argument from the query
+
 };
 
 #endif // SERVER_H

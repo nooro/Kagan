@@ -70,7 +70,12 @@ char ServerCommunication::LogIn(string username, string password)
         query[cursor] = password[i];
     }
 
-    //Send the complete packet like query like '1/user-name/password'
+    //Put the finale separator to indicate the end of the password
+    query[cursor] = '/';
+
+    query[cursor + 1] = '\0';
+
+    //Send the complete packet like query like '1/user-name/password/'
     output->data = (Uint8*)query;
     output->len = sizeof(query);
     numsent = SDLNet_UDP_Send(sock, channel, output);
@@ -110,11 +115,15 @@ char ServerCommunication::Register(string username, string password)
         query[cursor] = password[i];
     }
 
-    //Send the complete packet like query like '2/user-name/password'
+    //Put the finale separator to indicate the end of the password
+    query[cursor] = '/';
+
+    query[cursor + 1] = '\0';
+
+    //Send the complete packet like query like '2/user-name/password/'
     output->data = (Uint8*)query;
     output->len = sizeof(query);
     numsent = SDLNet_UDP_Send(sock, channel, output);
-
     //Receive the result from the log-in
     while(true)
     {

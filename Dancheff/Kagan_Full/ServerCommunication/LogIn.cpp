@@ -176,7 +176,7 @@ void LogIn::InitTheInputFields()
     usernameInputField->Render();
 
     //Set limitation for the input length
-    usernameInputField->SetCharLimit(10);
+    usernameInputField->SetCharLimit(15);
 
     //Make it active so text can be written
     usernameInputField->isActive = true;
@@ -204,7 +204,7 @@ void LogIn::InitTheInputFields()
     passwordInputField->Render();
 
     //Set limitation for the input length
-    passwordInputField->SetCharLimit(10);
+    passwordInputField->SetCharLimit(25);
 }
 
 void LogIn::InitTheTextures()
@@ -243,12 +243,12 @@ void LogIn::InitTheTextures()
         cout << "Failed to create button-hover texture: " << IMG_GetError() << endl;
 
     //Create the user-name label texture
-    usernameLabel = CreateTextTexture(renderer, "Username:", labelFont, usernameLabelRect.h, labelColor);
+    usernameLabel = CreateTextTexture(renderer, "Username:", labelFont, labelColor);
     if(buttonHoverTexture == NULL)
         cout << "Failed to create username label texture: " << IMG_GetError() << endl;
 
     //Create the password label texture
-    passwordLabel = CreateTextTexture(renderer, "Password:", labelFont, passwordLabelRect.h, labelColor);
+    passwordLabel = CreateTextTexture(renderer, "Password:", labelFont, labelColor);
     if(buttonHoverTexture == NULL)
         cout << "Failed to create password label texture: " << IMG_GetError() << endl;
 
