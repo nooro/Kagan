@@ -7,8 +7,8 @@ using namespace std;
 class User
 {
 public:
-    string username;
-    string password;
+    static string username;
+    static string password;
 
 };
 

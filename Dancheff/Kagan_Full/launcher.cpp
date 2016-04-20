@@ -1,12 +1,13 @@
 #include "General/General.h"
-#include "Kagan/Game.h"
-#include "User/User.h"
-#include "ServerCommunication/Register.h"
-
+#include "Kagan/Home.h"
+#include "ServerCommunication/LogIn.h"
 int main(int argc, char ** argv)
 {
     InitEverythingGeneral();
-    Register logIn;
-    delete(&logIn);
+
+    LogIn logIn;
+    if(logIn.Status() == LOG_IN_SUCCESS)
+        Home home;
+
     return 0;
 }

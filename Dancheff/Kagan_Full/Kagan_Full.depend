@@ -1,43 +1,42 @@
 # depslib dependency file v1.0
-1456643502 source:e:\kagan_full\kagan\game.cpp
+1456647102 source:e:\kagan_full\kagan\game.cpp
 	"Game.h"
 
-1458949072 source:e:\kagan_full\launcher.cpp
+1459201910 source:e:\kagan_full\launcher.cpp
 	"General/General.h"
-	"Kagan/Game.h"
-	"User/User.h"
-	"ServerCommunication/Register.h"
+	"Kagan/Home.h"
+	"ServerCommunication/LogIn.h"
 
-1456643502 e:\kagan_full\kagan\game.h
+1456647102 e:\kagan_full\kagan\game.h
 	<SDL.h>
 	<iostream>
 
-1456607355 source:e:\kagan_full\kagan\eventlistener.cpp
+1456610955 source:e:\kagan_full\kagan\eventlistener.cpp
 	"Game.h"
 
-1456608104 source:e:\kagan_full\kagan\gameloop.cpp
+1456611704 source:e:\kagan_full\kagan\gameloop.cpp
 	"Game.h"
 
-1456608104 source:e:\kagan_full\kagan\loadtheresources.cpp
+1456611704 source:e:\kagan_full\kagan\loadtheresources.cpp
 	"Game.h"
 
-1458946564 source:e:\kagan_full\servercommunication\servercommunication.cpp
+1458950164 source:e:\kagan_full\servercommunication\servercommunication.cpp
 	"ServerCommunication.h"
 
-1458742725 e:\kagan_full\servercommunication\servercommunication.h
+1458746325 e:\kagan_full\servercommunication\servercommunication.h
 	<SDL_net.h>
 	<iostream>
 	"PacketKeys.h"
 
-1458742892 e:\kagan_full\servercommunication\packetkeys.h
+1461068058 e:\kagan_full\servercommunication\packetkeys.h
 
-1456785937 e:\kagan_full\user\user.h
+1459201148 e:\kagan_full\user\user.h
 	<iostream>
 
-1458949963 source:e:\kagan_full\servercommunication\login.cpp
+1459202945 source:e:\kagan_full\servercommunication\login.cpp
 	"LogIn.h"
 
-1458918769 e:\kagan_full\servercommunication\login.h
+1461162300 e:\kagan_full\servercommunication\login.h
 	<SDL.h>
 	<SDL_image.h>
 	<SDL_ttf.h>
@@ -47,21 +46,21 @@
 	"../GUI/Button.h"
 	"../GUI/InputField.h"
 
-1457891872 source:e:\kagan_full\gui\gui.cpp
+1457895472 source:e:\kagan_full\gui\gui.cpp
 	"GUI.h"
 
-1457128395 e:\kagan_full\gui\gui.h
+1457131995 e:\kagan_full\gui\gui.h
 	<SDL.h>
 	<iostream>
 
-1458947951 e:\kagan_full\gui\button.h
+1461064482 e:\kagan_full\gui\button.h
 	"GUI.h"
 	"../General/General.h"
 	<iostream>
 	<SDL_ttf.h>
 	<SDL.h>
 
-1458947951 source:e:\kagan_full\gui\button.cpp
+1458951551 source:e:\kagan_full\gui\button.cpp
 	"Button.h"
 
 1456854609 e:\kagan_full\general\createtexture.h
@@ -72,20 +71,21 @@
 1456940366 e:\kagan_full\initialization\initialization.h
 	<windows.h>
 
-1458947873 source:e:\kagan_full\general\general.cpp
+1459201135 source:e:\kagan_full\general\general.cpp
 	"General.h"
 
-1458947918 e:\kagan_full\general\general.h
+1459200298 e:\kagan_full\general\general.h
 	<SDL.h>
 	<SDL_image.h>
 	<SDL_ttf.h>
 	<iostream>
 	<windows.h>
+	"../User/User.h"
 
-1458949861 source:e:\kagan_full\gui\inputfield.cpp
+1458953461 source:e:\kagan_full\gui\inputfield.cpp
 	"InputField.h"
 
-1458949692 e:\kagan_full\gui\inputfield.h
+1458953292 e:\kagan_full\gui\inputfield.h
 	"GUI.h"
 	"../General/General.h"
 	<iostream>
@@ -96,7 +96,7 @@
 	<SDL_net.h>
 	<iostream>
 
-1458746663 e:\kagan_full\servercommunication\register.h
+1459202262 e:\kagan_full\servercommunication\register.h
 	<SDL.h>
 	<SDL_image.h>
 	<SDL_ttf.h>
@@ -106,11 +106,21 @@
 	"../GUI/Button.h"
 	"../GUI/InputField.h"
 
-1458949991 source:e:\kagan_full\servercommunication\register.cpp
+1459202316 source:e:\kagan_full\servercommunication\register.cpp
 	"Register.h"
 
-1458917972 source:e:\kagan_full\launcher\profilewindow.cpp
+1458921572 source:e:\kagan_full\launcher\profilewindow.cpp
 	"ProfileWindow.h"
 
-1458917974 e:\kagan_full\launcher\profilewindow.h
+1458921574 e:\kagan_full\launcher\profilewindow.h
+
+1460810637 source:e:\kagan_full\kagan\home.cpp
+	"Home.h"
+
+1460727985 e:\kagan_full\kagan\home.h
+	<SDL.h>
+	<SDL_ttf.h>
+	<iostream>
+	"../General/General.h"
+	"../GUI/Button.h"
 

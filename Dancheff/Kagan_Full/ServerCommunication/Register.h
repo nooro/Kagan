@@ -57,6 +57,7 @@ private:
     void InitTheButton();
     void InitTheInputFields();
     void InitTheTextures();
+    char status;
 };
 
 #endif // LOGIN_H_INCLUDED

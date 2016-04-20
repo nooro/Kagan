@@ -72,8 +72,9 @@ Register::Register()
 
     if(server.Connection())
     {
+        status = server.Register(usernameInputField->GetInputText(), passwordInputField->GetInputText());
         if(passwordInputField->GetInputText() == passwordRepeatInputField->GetInputText())
-            cout << "Register status: " << server.Register(usernameInputField->GetInputText(), passwordInputField->GetInputText());
+            cout << "Register status: " << status;
         else
         {
             cout << "Repeat the password correctly m8" << endl;

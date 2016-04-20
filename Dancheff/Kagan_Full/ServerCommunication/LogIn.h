@@ -19,7 +19,7 @@ public:
     char Status(); //Return if the log-in is successful or not.
 
 private:
-    char *serverIP = "127.0.0.1";
+    char *serverIP = "192.168.112.253";
     SDL_Texture *inputFieldTexture = NULL;
     SDL_Texture *inputFieldTextureHover = NULL;
     SDL_Window *window = NULL;
@@ -51,6 +51,7 @@ private:
     void InitTheButton();
     void InitTheInputFields();
     void InitTheTextures();
+    char status;
 };
 
 #endif // LOGIN_H_INCLUDED

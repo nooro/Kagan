@@ -66,7 +66,12 @@ LogIn::LogIn()
 
     if(server.Connection())
     {
-        cout << "Log-in status: " << server.LogIn(usernameInputField->GetInputText(), passwordInputField->GetInputText());
+        status = server.LogIn(usernameInputField->GetInputText(), passwordInputField->GetInputText());
+        if(status == LOG_IN_SUCCESS)
+        {
+            User::username = usernameInputField->GetInputText();
+            User::password = passwordInputField->GetInputText();
+        }
     }
     else
     {
@@ -244,6 +249,7 @@ void LogIn::InitTheTextures()
 
     //Create the user-name label texture
     usernameLabel = CreateTextTexture(renderer, "Username:", labelFont, labelColor);
+
     if(buttonHoverTexture == NULL)
         cout << "Failed to create username label texture: " << IMG_GetError() << endl;
 
@@ -262,3 +268,5 @@ void LogIn::InitTheTextures()
     if(inputFieldTextureHover == NULL)
         cout << "Failed to create input field hover border texture: " << IMG_GetError() << endl;
 }
+
+char LogIn::Status() { return status; }

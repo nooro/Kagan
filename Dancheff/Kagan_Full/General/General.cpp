@@ -1,5 +1,8 @@
 #include "General.h"
 
+string User::username = "";
+string User::password = "";
+
 int screenHeight;
 int screenWidth;
 
