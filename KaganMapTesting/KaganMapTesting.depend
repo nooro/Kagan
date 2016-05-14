@@ -1,0 +1,126 @@
+# depslib dependency file v1.0
+1463227579 source:c:\users\d1m1tur\documents\codeblocks projects\kaganmaptesting\animation.cpp
+	"Game.h"
+	"Animation.h"
+
+1463250115 c:\users\d1m1tur\documents\codeblocks projects\kaganmaptesting\game.h
+	"Includes.h"
+	"Entity.h"
+	"Enemies.h"
+	"Camera.h"
+	"Animation.h"
+	"Map.h"
+	<list>
+	"GUIBars.h"
+	"DMGText.h"
+
+1463240762 c:\users\d1m1tur\documents\codeblocks projects\kaganmaptesting\includes.h
+	<SDL.h>
+	<SDL_image.h>
+	<iostream>
+	<windows.h>
+	<stdlib.h>
+	<stdio.h>
+	<time.h>
+	<typeinfo>
+	<fstream>
+	<sstream>
+	<math.h>
+
+1463246767 c:\users\d1m1tur\documents\codeblocks projects\kaganmaptesting\entity.h
+	"Includes.h"
+	"Camera.h"
+	"Animation.h"
+
+1458651614 c:\users\d1m1tur\documents\codeblocks projects\kaganmaptesting\camera.h
+	"Includes.h"
+
+1463227873 c:\users\d1m1tur\documents\codeblocks projects\kaganmaptesting\animation.h
+	"Includes.h"
+
+1458651614 source:c:\users\d1m1tur\documents\codeblocks projects\kaganmaptesting\camera.cpp
+	"Camera.h"
+
+1461166178 source:c:\users\d1m1tur\documents\codeblocks projects\kaganmaptesting\cleanup.cpp
+	"Game.h"
+
+1463249412 source:c:\users\d1m1tur\documents\codeblocks projects\kaganmaptesting\enemies.cpp
+	"Enemies.h"
+
+1463248997 c:\users\d1m1tur\documents\codeblocks projects\kaganmaptesting\enemies.h
+	"Includes.h"
+	"Entity.h"
+
+1463246767 source:c:\users\d1m1tur\documents\codeblocks projects\kaganmaptesting\entity.cpp
+	"Game.h"
+
+1458829632 source:c:\users\d1m1tur\documents\codeblocks projects\kaganmaptesting\fps.cpp
+	"Game.h"
+
+1463250115 source:c:\users\d1m1tur\documents\codeblocks projects\kaganmaptesting\game.cpp
+	"Game.h"
+
+1463250115 source:c:\users\d1m1tur\documents\codeblocks projects\kaganmaptesting\loadcontent.cpp
+	"Game.h"
+
+1463142300 source:c:\users\d1m1tur\documents\codeblocks projects\kaganmaptesting\map.cpp
+	"Map.h"
+	"Game.h"
+	<string>
+	<windows.h>
+	<direct.h>
+
+1463141072 c:\users\d1m1tur\documents\codeblocks projects\kaganmaptesting\map.h
+	"TILE.h"
+	"Includes.h"
+
+1462978997 c:\users\d1m1tur\documents\codeblocks projects\kaganmaptesting\tile.h
+	"Includes.h"
+	"Camera.h"
+
+1459283666 source:c:\users\d1m1tur\documents\codeblocks projects\kaganmaptesting\map_gameobjects.cpp
+	"Map.h"
+	"Game.h"
+
+1463246016 source:c:\users\d1m1tur\documents\codeblocks projects\kaganmaptesting\onevent.cpp
+	"Game.h"
+
+1463249476 source:c:\users\d1m1tur\documents\codeblocks projects\kaganmaptesting\oninit.cpp
+	"Game.h"
+	"Map.h"
+
+1463250115 source:c:\users\d1m1tur\documents\codeblocks projects\kaganmaptesting\onloop.cpp
+	"Game.h"
+
+1463250250 source:c:\users\d1m1tur\documents\codeblocks projects\kaganmaptesting\onrender.cpp
+	"Game.h"
+
+1462978997 source:c:\users\d1m1tur\documents\codeblocks projects\kaganmaptesting\tile.cpp
+	"TILE.h"
+	"Game.h"
+
+1463247377 c:\users\d1m1tur\documents\codeblocks projects\kaganmaptesting\guibars.h
+	"LGTexture.h"
+
+1463246772 c:\users\d1m1tur\documents\codeblocks projects\kaganmaptesting\dmgtext.h
+	<SDL.h>
+	<SDL_ttf.h>
+	"LGTexture.h"
+	<sstream>
+	<string>
+	<list>
+	<iostream>
+
+1458246459 c:\users\d1m1tur\documents\codeblocks projects\kaganmaptesting\lgtexture.h
+	"SDL.h"
+	"SDL_ttf.h"
+	"SDL_image.h"
+	<string>
+	<stdio.h>
+
+1463246930 source:c:\users\d1m1tur\documents\codeblocks projects\kaganmaptesting\dmgtext.cpp
+	"DMGText.h"
+
+1458246138 source:c:\users\d1m1tur\documents\codeblocks projects\kaganmaptesting\lgtexture.cpp
+	"LGTexture.h"
+
