@@ -1,84 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
+	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
 	<File name="GUI\Button.h" open="1" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="505" topLine="0" />
+			<Cursor1 position="505" topLine="5" />
 		</Cursor>
 	</File>
-	<File name="launcher.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Kagan\EventListener.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="241" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="GUI\GUI.cpp" open="0" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="62" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Kagan\Game.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="762" topLine="8" />
-		</Cursor>
-	</File>
-	<File name="ServerCommunication\ServerCommunication.h" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="403" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="General\General.h" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="223" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Kagan\GameLoop.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="119" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Kagan\LoadTheResources.cpp" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="ServerCommunication\PacketKeys.h" open="1" top="1" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="351" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="ServerCommunication\LogIn.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3156" topLine="102" />
-		</Cursor>
-	</File>
-	<File name="ServerCommunication\LogIn.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="993" topLine="24" />
-		</Cursor>
-	</File>
-	<File name="ServerCommunication\Register.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2975" topLine="64" />
-		</Cursor>
-	</File>
-	<File name="User\User.h" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="161" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Kagan\Game.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="595" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="GUI\Button.cpp" open="1" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="248" topLine="0" />
+			<Cursor1 position="295" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="GUI\GUI.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="561" topLine="4" />
+		</Cursor>
+	</File>
+	<File name="GUI\InputField.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="746" topLine="11" />
+		</Cursor>
+	</File>
+	<File name="Kagan\Game.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="762" topLine="8" />
 		</Cursor>
 	</File>
 	<File name="ServerCommunication\Register.h" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -91,9 +37,9 @@
 			<Cursor1 position="2374" topLine="70" />
 		</Cursor>
 	</File>
-	<File name="GUI\InputField.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="ServerCommunication\ServerCommunication.cpp" open="0" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="746" topLine="11" />
+			<Cursor1 position="3294" topLine="102" />
 		</Cursor>
 	</File>
 	<File name="Kagan\Home.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -101,9 +47,14 @@
 			<Cursor1 position="2989" topLine="135" />
 		</Cursor>
 	</File>
-	<File name="Kagan\EventListener.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="ServerCommunication\ServerCommunication.h" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="295" topLine="0" />
+			<Cursor1 position="249" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Kagan\LoadTheResources.cpp" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="Kagan\Home.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -111,14 +62,65 @@
 			<Cursor1 position="1281" topLine="27" />
 		</Cursor>
 	</File>
+	<File name="GUI\GUI.cpp" open="0" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="62" topLine="0" />
+		</Cursor>
+	</File>
 	<File name="General\General.cpp" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="372" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="ServerCommunication\ServerCommunication.cpp" open="0" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="General\General.h" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="3294" topLine="102" />
+			<Cursor1 position="223" topLine="0" />
 		</Cursor>
 	</File>
+	<File name="GUI\Button.cpp" open="1" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="248" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Kagan\GameLoop.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="119" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Kagan\Game.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="595" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="ServerCommunication\LogIn.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3156" topLine="102" />
+		</Cursor>
+	</File>
+	<File name="ServerCommunication\LogIn.h" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="567" topLine="12" />
+		</Cursor>
+	</File>
+	<File name="launcher.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="241" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="ServerCommunication\Register.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2975" topLine="64" />
+		</Cursor>
+	</File>
+	<File name="ServerCommunication\PacketKeys.h" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="351" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="User\User.h" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="161" topLine="0" />
+		</Cursor>
+	</File>
+	<EditorTabsLayout layout="0a17179857390e1800001aa600000002=0;Kagan_Full:launcher.cpp,1;Kagan_Full:GUI\InputField.h,*2;Kagan_Full:ServerCommunication\LogIn.h,3;Kagan_Full:GUI\InputField.cpp,4;Kagan_Full:ServerCommunication\LogIn.cpp,5;Kagan_Full:ServerCommunication\Register.cpp,6;Kagan_Full:Kagan\Home.h,7;Kagan_Full:Kagan\Home.cpp,8;Kagan_Full:Kagan\Game.h,9;Kagan_Full:ServerCommunication\Register.h,10;Kagan_Full:ServerCommunication\ServerCommunication.h,11;Kagan_Full:User\User.h,12;Kagan_Full:General\General.cpp,13;Kagan_Full:General\General.h,14;Kagan_Full:ServerCommunication\PacketKeys.h,15;Kagan_Full:GUI\Button.cpp,16;Kagan_Full:GUI\Button.h@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=577;besth=204;minw=577;minh=204;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=0a17179857390e1800001aa600000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=202|" />
 </CodeBlocks_layout_file>

@@ -5,9 +5,19 @@ bool Game::LoadContent()
     ///TEXTURES
 
     Character.Image = OnLoad(Renderer, "./Resources/Images/SIdle1.png");
-    First.Image = OnLoad(Renderer, "./Resources/Images/tun.png");
+
+    for(int i = 0; i < 5; i++)
+        Enemy[i].Image = OnLoad(Renderer, "./Resources/Images/tun.png");
+    for(int i = 5; i < 10; i++)
+        Enemy[i].Image = OnLoad(Renderer, "./Resources/Images/spidey.png");
+
+
     Thanks = OnLoad(Renderer, "./Resources/Images/thanks.png");
     SDL_SetTextureAlphaMod(Thanks, 140);
+
+    Win = OnLoad(Renderer, "./Resources/Images/win.jpg");
+    SDL_SetTextureAlphaMod(Win, 140);
+
 
     if(!Idle[0].Load(Renderer, "./Resources/Images/SIdle1.png", 50, 100, 80)) return false;
     if(!Idle[1].Load(Renderer, "./Resources/Images/SIdle2.png", 50, 100, 80)) return false;
@@ -49,12 +59,12 @@ bool Game::LoadContent()
         return false;
     }
 
-    if(First.Image == NULL)
+    if(Thanks == NULL)
     {
         return false;
     }
 
-    if(Thanks == NULL)
+    if(Win == NULL)
     {
         return false;
     }

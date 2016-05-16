@@ -39,6 +39,7 @@ class Game
         float Ky;
         int currentLayer;
         SDL_Texture* Thanks;
+        SDL_Texture* Win;
 
         Uint32 start;
 
@@ -46,7 +47,7 @@ class Game
         list<Map> layer;
         Camera Camera1;
 
-        Enemies First;
+        Enemies Enemy[10];
         Entity Character;
         Entity HitMark;
         Animation Idle[8];
@@ -95,6 +96,10 @@ class Game
         void LoadLayer(string file);
         void LoadMap(char* map_file);
         void MakeResponsive();
+        void EnemiesHandle();
+        void EnemyActions(Enemies* temp);
+        void Damaging(int dmg_);
+        void RightClick();
 
         bar health_bar; // Health bar for the character
         dmgFloat dmgtxt; // single floating text to copy in to the vector

@@ -16,7 +16,7 @@ bool Game::OnInit()
 
     //Creating Window             title ,Xpos,Ypos,Width,Height, settings
     if((Window = SDL_CreateWindow("Blank", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, MIN_WINDOW_X, MIN_WINDOW_Y,
-                                  SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE | SDL_WINDOW_MAXIMIZED)) == NULL)
+                                  SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE | SDL_WINDOW_FULLSCREEN_DESKTOP)) == NULL)
     {
         return false;
     }
@@ -68,8 +68,23 @@ bool Game::OnInit()
 
     Character.CreateEntity(0, 0, 150, 120);
     HitMark.CreateEntity(0, 0, 96, 96);
-    First.CreateEntity(100, 100, 112, 112);
-    First.CreateEnemy(100, 2, 100, 200, 10);
+
+    for(int i = 0; i < 5; i ++)
+        Enemy[i].CreateEnemy(100, 2, 4, 250, 25); // flying
+    for(int i = 5; i < 10; i ++)
+        Enemy[i].CreateEnemy(60, 4, 1, 600, 10); // spidey
+
+    Enemy[0].CreateEntity(300, 300, 112, 112);
+    Enemy[1].CreateEntity(700, 700, 112, 112);
+    Enemy[2].CreateEntity(1000, 1300, 112, 112);
+    Enemy[3].CreateEntity(400, 900, 112, 112);
+    Enemy[4].CreateEntity(700, 900, 112, 112);
+    Enemy[5].CreateEntity(1400, 1400, 120, 100);
+    Enemy[6].CreateEntity(1000, 2200, 120, 100);
+    Enemy[7].CreateEntity(400, 1300, 120, 100);
+    Enemy[8].CreateEntity(100, 900, 120, 100);
+    Enemy[9].CreateEntity(900, 700, 120, 100);
+
 
     LoadMap("./Resources/Maps/Mapv1.map");
 

@@ -27,84 +27,10 @@ void Game::OnLoop()
     }
     else if(RightButtonPressed)
     {
-        Character.action = Character.ATACK;
-        HitMark.XPos = Character.XPos;
-        HitMark.YPos = Character.YPos;
-
-        if(Character.rotation == Character.LEFT)
-        {
-            HitMark.XPos = Character.XPos - 60;
-            HitMark.YPos = Character.YPos + 20;
-        }
-        if(Character.rotation == Character.RIGHT)
-        {
-            HitMark.XPos = Character.XPos + 120;
-            HitMark.YPos = Character.YPos + 20;
-        }
-        if(Character.rotation == Character.DOWN_LEFT)
-        {
-            HitMark.XPos = Character.XPos - 40;
-            HitMark.YPos = Character.YPos + 60;
-        }
-        if(Character.rotation == Character.DOWN_RIGHT)
-        {
-            HitMark.XPos = Character.XPos + 100;
-            HitMark.YPos = Character.YPos + 70;
-        }
-        if(Character.rotation == Character.DOWN)
-        {
-            HitMark.XPos = Character.XPos + 20;
-            HitMark.YPos = Character.YPos + 100;
-        }
-        if(Character.rotation == Character.UP_RIGHT)
-        {
-            HitMark.XPos = Character.XPos + 120;
-            HitMark.YPos = Character.YPos - 20;
-        }
-        if(Character.rotation == Character.UP)
-        {
-            HitMark.XPos = Character.XPos + 40;
-            HitMark.YPos = Character.YPos - 60;
-        }
-        if(Character.rotation == Character.UP_LEFT)
-        {
-            HitMark.XPos = Character.XPos - 50;
-            HitMark.YPos = Character.YPos - 30;
-        }
+        RightClick();
     }
 
-    First.Aggro(Character.XPos + Character.Width / 2, Character.YPos + Character.Height / 2, &Camera1);
-
-    system("cls");
-    cout << Character.XPos << " " << Character.YPos << "      " << First.XPos << " " << First.YPos <<endl;
-
-    First.cd++;
-
-    if(First.Atack(Character) && First.cd >= First.atack_speed)
-    {
-        First.cd = 0;
-
-        float text_x = Character.XPos + Character.Width / 2 + Camera1.camX;
-        float text_y = Character.YPos + Camera1.camY;
-
-        text_x /= WindowWidth;
-        text_y /= WindowHeight;
-
-        cout << text_x << " TEXT COORD " << text_y <<endl;
-
-        system("cls");
-        cout << "Damaging" <<endl;
-
-
-        Character.takeDmg(First.dmg);
-        dmgtxt.load(First.dmg, text_x, text_y);
-        dmg_text.push_back(dmgtxt);
-        health_bar.setCurrency(Character.hp);
-
-    }
-
-
-
+    EnemiesHandle();
 
     //Caps the frame rate depending on the ticks that have past
     string fps = FrameRate(FPS);
@@ -163,3 +89,91 @@ void Game::MakeResponsive()
     Kx = Window_Width / MIN_WINDOW_X;
     Ky = Window_Height / MIN_WINDOW_Y;
 }
+
+void Game::EnemiesHandle()
+{
+    for(int i = 0; i < 10; i++)
+        EnemyActions(&Enemy[i]);
+}
+
+void Game::EnemyActions(Enemies* temp)
+{
+    if(temp->alive == false)
+        return;
+
+    temp->Aggro(Character.XPos + Character.Width / 2, Character.YPos + Character.Height / 2, &Camera1);
+    temp->cd++;
+    if(temp->Atack(Character) && temp->cd >= temp->atack_speed)
+    {
+        temp->cd = 0;
+        Damaging(temp->dmg);
+    }
+    if(temp->health < 0)
+    {
+        temp->health = 0;
+        temp->alive = false;
+    }
+}
+
+void Game::RightClick()
+{
+    Character.action = Character.ATACK;
+        HitMark.XPos = Character.XPos;
+        HitMark.YPos = Character.YPos;
+
+        if(Character.rotation == Character.LEFT)
+        {
+            HitMark.XPos = Character.XPos - 60;
+            HitMark.YPos = Character.YPos + 20;
+        }
+        if(Character.rotation == Character.RIGHT)
+        {
+            HitMark.XPos = Character.XPos + 120;
+            HitMark.YPos = Character.YPos + 20;
+        }
+        if(Character.rotation == Character.DOWN_LEFT)
+        {
+            HitMark.XPos = Character.XPos - 40;
+            HitMark.YPos = Character.YPos + 60;
+        }
+        if(Character.rotation == Character.DOWN_RIGHT)
+        {
+            HitMark.XPos = Character.XPos + 100;
+            HitMark.YPos = Character.YPos + 70;
+        }
+        if(Character.rotation == Character.DOWN)
+        {
+            HitMark.XPos = Character.XPos + 20;
+            HitMark.YPos = Character.YPos + 100;
+        }
+        if(Character.rotation == Character.UP_RIGHT)
+        {
+            HitMark.XPos = Character.XPos + 120;
+            HitMark.YPos = Character.YPos - 20;
+        }
+        if(Character.rotation == Character.UP)
+        {
+            HitMark.XPos = Character.XPos + 40;
+            HitMark.YPos = Character.YPos - 60;
+        }
+        if(Character.rotation == Character.UP_LEFT)
+        {
+            HitMark.XPos = Character.XPos - 50;
+            HitMark.YPos = Character.YPos - 30;
+        }
+}
+
+void Game::Damaging(int dmg_)
+{
+    float text_x = Character.XPos + Character.Width / 2 + Camera1.camX;
+    float text_y = Character.YPos + Camera1.camY;
+
+    text_x /= WindowWidth;
+    text_y /= WindowHeight;
+
+    Character.takeDmg(dmg_);
+    dmgtxt.load(dmg_, text_x, text_y);
+    dmg_text.push_back(dmgtxt);
+    health_bar.setCurrency(Character.hp);
+}
+

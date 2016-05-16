@@ -19,7 +19,7 @@ public:
     char Status(); //Return if the log-in is successful or not.
 
 private:
-    char *serverIP = "192.168.112.253";
+    char *serverIP = "localhost";
     SDL_Texture *inputFieldTexture = NULL;
     SDL_Texture *inputFieldTextureHover = NULL;
     SDL_Window *window = NULL;

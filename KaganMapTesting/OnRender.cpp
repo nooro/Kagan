@@ -13,7 +13,8 @@ void Game::OnRender()
         it->RenderMap(Renderer, &Camera1, WindowWidth, WindowHeight);
     }
 
-    First.DrawEntity(Renderer, &Camera1);
+    for(int i = 0; i < 10; i++)
+        Enemy[i].DrawEntity(Renderer, &Camera1);
 
     Camera1.camX = -(Character.XPos - WindowWidth / 2 + Character.Width / 2);
     Camera1.camY = -(Character.YPos - WindowHeight / 2 + Character.Height / 2);
@@ -29,10 +30,16 @@ void Game::OnRender()
         case Character.ATACK:
             Character.AnimateBackwards(Renderer, &Camera1, &Atack[Character.rotation], 1.10);
             if(Atack[Character.rotation].currentFrame > 15 && Atack[Character.rotation].currentFrame < 20)
+            {
                 HitMark.Animate(Renderer, &Camera1, &Spark);
+                for(int i = 0; i < 10; i++)
+                if(Enemy[i].CheckEntityColl(HitMark))
+                {
+                    Enemy[i].health -= 10;
+                }
 
-            for(int i = 0; i < 10; i++)
-                cout <<"HERE  "<< Atack[Character.rotation].currentFrame <<endl;
+            }
+
             break;
         default:
             Character.Animate(Renderer, &Camera1, &Idle[Character.rotation]);
@@ -53,9 +60,19 @@ void Game::OnRender()
     }
 
     SDL_SetTextureAlphaMod(Thanks, 100);
+    SDL_SetTextureAlphaMod(Win, 100);
 
     if(Character.alive == false)
         Draw(Renderer, &Camera1, Thanks, 0 - Camera1.camX, 0 - Camera1.camY, WindowWidth, WindowHeight, 0, SDL_FLIP_NONE);
+
+    for(int i = 0; i < 10; i ++)
+    {
+        if(Enemy[i].alive == true)
+            break;
+
+        if(i == 9)
+            Draw(Renderer, &Camera1, Win, 0 - Camera1.camX, 0 - Camera1.camY, WindowWidth, WindowHeight, 0, SDL_FLIP_NONE);
+    }
 
 
     SDL_RenderPresent(Renderer);

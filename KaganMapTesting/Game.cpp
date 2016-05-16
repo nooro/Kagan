@@ -6,6 +6,7 @@ Game::Game()
 
     Window = NULL;
     Thanks = NULL;
+    Win = NULL;
 
     Icon = NULL;
     Running = true;

@@ -132,6 +132,9 @@ void Entity::MoveTo_Mouse(float x_, float y_, int prob_, Camera* cam)
 
 void Entity::DrawEntity(SDL_Renderer* Rend, Camera* cam)
 {
+    if(alive == false)
+        return;
+
     Game::Draw(Rend, cam, Image, XPos, YPos, Width, Height, 0, Flip);
 }
 
