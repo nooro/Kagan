@@ -3,6 +3,7 @@
 
 #include <SDL_net.h>
 #include <iostream>
+#include <string>
 #include "Client.h"
 #include "PacketKeys.h"
 #include "ProfileManager.h"
@@ -39,7 +40,7 @@ private:
     void ResendToAllClients(Uint32 senderHost); //When one client sends data the server resends it to all other clients (the magic of synchronization)
     void AddNewClient(Uint32 host, Uint16 port, string username, int channel); //Add new client to the clients' array
     string GetQueryArgument(Uint8 *input, int argumentNumber); //Get argument from the query
-
+    void KickClient(Uint32 host); //Make client off-line
 };
 
 #endif // SERVER_H

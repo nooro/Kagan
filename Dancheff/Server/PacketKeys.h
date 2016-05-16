@@ -1,7 +1,7 @@
 #ifndef PACKETKEYS_H_INCLUDED
 #define PACKETKEYS_H_INCLUDED
 
-#define SERVER_IS_FULL_KEY 0
+#define SERVER_IS_FULL_KEY '0'
 
 #define LOG_IN_KEY '1'
 #define LOG_IN_SUCCESS 'q'
@@ -11,5 +11,7 @@
 #define REGISTER_KEY '2'
 #define REGISTER_SUCCESS 'r'
 #define REGISTER_USED_USERNAME 't'
+
+#define KICK_KEY '3'
 
 #endif // PACKETKEYS_H_INCLUDED

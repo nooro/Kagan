@@ -60,6 +60,10 @@ void Server::MainLoop()
                 SendData((Uint8*)registerStatus, sizeof(registerStatus));
                 cout << "New profile registered: " << GetQueryArgument(input->data, 2) << endl;
             }
+            else if(RECEIVED_KEY == KICK_KEY)
+            {
+                KickClient(input->address.host);
+            }
             Server::SendBack();
             receivedData = "";
         }
@@ -132,4 +136,25 @@ string Server::GetQueryArgument(Uint8 *input, int argumentNumber)
             argument += input[i];
     }
     return argument;
+}
+
+void Server::KickClient(Uint32 host)
+{
+    for(int i = 0; i < numberOfClients; i++)
+    {
+        if(clientsArray[i].host_ == host)
+        {
+            for(int j = i; j < numberOfClients - 1; j++)
+            {
+                clientsArray[j].channel_ = clientsArray[j+1].channel_;
+                clientsArray[j].host_ = clientsArray[j+1].host_;
+                clientsArray[j].password_ = clientsArray[j+1].password_;
+                clientsArray[j].port_ = clientsArray[j+1].port_;
+                clientsArray[j].username_ = clientsArray[j+1].username_;
+            }
+            numberOfClients--;
+            cout << clientsArray[i].username_ << " gone off-line" << endl;
+            break;
+        }
+    }
 }
